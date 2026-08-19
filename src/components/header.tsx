@@ -17,10 +17,10 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative z-50 w-full rounded-b-[48px] border-b border-cream bg-olive text-cream">
-      <div className="mx-auto flex h-[138px] max-w-[1440px] items-center justify-between px-5 lg:px-[80px]">
+    <header className="relative z-50 w-full rounded-b-[28px] border-b border-cream bg-olive text-cream lg:rounded-b-[48px]">
+      <div className="mx-auto flex h-[96px] max-w-[1440px] items-center justify-between px-5 lg:h-[138px] lg:px-[80px]">
         <Link href="#home" aria-label="Arabian Paws home" className="shrink-0 transition-transform duration-300 hover:scale-[1.03]">
-          <Logo />
+          <Logo className="h-[60px] w-[136px] lg:h-[77px] lg:w-[173px]" />
         </Link>
 
         <nav className="hidden items-center gap-[38px] lg:flex">
