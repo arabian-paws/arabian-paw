@@ -53,7 +53,7 @@ export function Gallery() {
               key={social.label}
               href="#gallery"
               aria-label={social.label}
-              className={`flex size-[39px] items-center justify-center overflow-clip transition-transform duration-300 hover:scale-110 ${social.plain ? "" : "rounded-full bg-cream"}`}
+              className={`flex size-[39px] items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-110 ${social.plain ? "" : "rounded-full bg-cream"}`}
             >
               <img src={social.src} alt="" className="size-[17px] object-contain" />
             </a>
