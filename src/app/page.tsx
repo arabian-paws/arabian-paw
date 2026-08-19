@@ -13,7 +13,7 @@ import { Vets } from "@/components/vets";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main>
       <Hero />
       <Reveal>
         <About />

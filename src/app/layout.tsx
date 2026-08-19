@@ -37,9 +37,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${syne.variable} ${urbanist.variable} ${inter.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${syne.variable} ${urbanist.variable} ${inter.variable} antialiased`}
     >
-      <body className="min-h-full overflow-x-hidden bg-white text-olive">
+      <body className="min-h-full bg-white text-olive">
         <Header />
         {children}
         <Reveal>
