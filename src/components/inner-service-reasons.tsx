@@ -12,7 +12,7 @@ const REASONS = [
   "Expert Pain Relief & Stabilization For Trauma Or Shock",
   "Prevention Tips To Help Reduce Future Emergencies",
   "Emergency Surgery Available For Severe Wounds & Internal Bleeding",
-  "24/7 Emergency Hotline & Veterinary Support At Modern Vet",
+  "24/7 Emergency Hotline & Veterinary Support At Arabian Paws",
 ];
 
 export function InnerServiceReasons() {
@@ -24,8 +24,8 @@ export function InnerServiceReasons() {
             Key Reasons Why Your Pet Needs Emergency Care
           </h2>
           <p className="max-w-[776px] text-center text-[18px] leading-[24px] text-olive sm:text-[22.5px] sm:leading-[24px]">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit,
+            Do not wait if your pet is showing signs of a serious medical problem. Contact Arabian
+            Paws for immediate veterinary assistance.
           </p>
 
           <div className="grid w-full grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-[19px] lg:gap-y-[18px]">

@@ -59,7 +59,7 @@ export function InnerServiceHero() {
   return (
     <section className="pt-6 lg:pt-[28px]">
       <Frame>
-        <div className="relative overflow-hidden rounded-[12px] bg-gold lg:h-[720px]">
+        <div className="hero-rise relative overflow-hidden rounded-[12px] bg-gold lg:h-[720px]" style={{ animationDelay: "80ms" }}>
           <div className="pointer-events-none absolute left-[414px] top-0 hidden h-[720px] w-[842px] overflow-hidden lg:block">
             <img
               src="/images/inner-hero-cat.png"
@@ -73,10 +73,11 @@ export function InnerServiceHero() {
               Emergency & ICU
             </p>
             <h1 className="font-display text-[34px] uppercase leading-[36px] text-olive sm:text-[46px] sm:leading-[43px]">
-              24/7 Emergency & Critical Care
+              When every minute matters
             </h1>
             <p className="max-w-[369px] text-[18px] leading-[22px] tracking-[-0.66px] text-black sm:text-[20px]">
-              Arabian Paws Vet Clinic is one of the premier veterinary clinics in Majan, Dubai.
+              Round-the-clock emergency and critical care for pets requiring immediate attention in
+              Majan.
             </p>
             <div className="flex flex-col items-start gap-3 sm:flex-row sm:gap-[18px]">
               <PillButton

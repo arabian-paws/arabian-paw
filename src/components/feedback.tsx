@@ -21,8 +21,8 @@ export function Feedback() {
             Feedback
           </h2>
           <p className="mt-8 text-[22px] leading-[24px] text-olive">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit
-            amet, consectetuer adipiscing elit,
+            Tell us a little about your pet and the reason for your visit. Our team will help
+            arrange the appropriate appointment.
           </p>
           <PillButton href="#news" variant="olive" className="mt-10 w-[166px] px-0">
             See All

@@ -3,21 +3,21 @@ import { Frame, PillButton } from "@/components/ui";
 const vets = [
   {
     name: "John Carter",
-    role: "Veterinarian",
+    role: "Veterinary Doctor",
     image: "/images/doctor-john.png",
     imgClass: "left-1/2 top-[6%] h-[148%] w-auto -translate-x-1/2",
     offset: false,
   },
   {
     name: "Lilly Woods",
-    role: "Veterinarian",
+    role: "Nursing & Clinical Support",
     image: "/images/doctor-lilly.png",
     imgClass: "left-1/2 top-[14%] h-[98%] w-auto -translate-x-1/2",
     offset: true,
   },
   {
     name: "Ilsa Moore",
-    role: "Veterinarian",
+    role: "Clinic Operations",
     image: "/images/doctor-ilsa.png",
     imgClass: "left-1/2 top-[16%] h-[102%] w-auto -translate-x-1/2",
     offset: false,
@@ -59,11 +59,11 @@ export function Vets() {
         </div>
         <div className="mt-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <p className="max-w-[480px] text-[22px] leading-[24px] text-olive">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit
-            amet, consectetuer adipiscing elit,
+            Experience behind every decision. Our founding team brings together veterinary, nursing
+            and administrative expertise.
           </p>
-          <PillButton href="#news" variant="olive" className="w-[200px] px-0">
-            See All
+          <PillButton href="/about#vets" variant="olive" className="w-[200px] px-0">
+            Meet Our Team
           </PillButton>
         </div>
       </Frame>

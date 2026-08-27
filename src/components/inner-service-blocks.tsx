@@ -3,25 +3,29 @@ import { Frame, PillButton } from "@/components/ui";
 
 const BLOCKS = [
   {
-    title: "24/7 Emergency Triage & Stabilization",
+    title: "Emergency Triage & Stabilisation",
+    body: "Rapid assessment and immediate support for pets requiring urgent attention.",
     image: "/images/inner-triage.png",
     alt: "Veterinarian examining a puppy during emergency triage",
     imageLeft: false,
   },
   {
-    title: "Intensive Care Unit (ICU)",
+    title: "Intensive Care",
+    body: "Dedicated ICU support for patients who require close observation and ongoing treatment.",
     image: "/images/inner-icu.png",
     alt: "Dog receiving intensive care monitoring",
     imageLeft: true,
   },
   {
-    title: "Poisoning & Trauma Management",
+    title: "Trauma & Poisoning Management",
+    body: "Prompt assessment and treatment for serious injuries, suspected poisoning and other urgent conditions.",
     image: "/images/inner-trauma.png",
     alt: "Veterinarian examining a cat after trauma",
     imageLeft: false,
   },
   {
     title: "Emergency Surgery",
+    body: "Surgical intervention when an emergency requires immediate treatment.",
     image: "/images/inner-surgery.png",
     alt: "Veterinary team performing emergency surgery",
     imageLeft: true,
@@ -54,7 +58,7 @@ export function InnerServiceBlocks() {
           {BLOCKS.map((block) => (
             <article
               key={block.title}
-              className="flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-[120px]"
+              className="group flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-[120px]"
             >
               <div
                 className={`relative h-[240px] w-full overflow-hidden rounded-[12px] sm:h-[320px] lg:h-[358px] lg:w-[551px] lg:shrink-0 ${
@@ -65,7 +69,7 @@ export function InnerServiceBlocks() {
                   src={block.image}
                   alt={block.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="(min-width: 1024px) 551px, 100vw"
                 />
               </div>
@@ -78,7 +82,7 @@ export function InnerServiceBlocks() {
                   {block.title}
                 </h2>
                 <p className="mt-6 max-w-[369px] text-[18px] leading-[22px] tracking-[-0.66px] text-black sm:mt-8 sm:text-[20px] lg:min-h-[129px] lg:content-center">
-                  Round-the-clock emergency response with dedicated ICU units.
+                  {block.body}
                 </p>
                 <Actions />
               </div>

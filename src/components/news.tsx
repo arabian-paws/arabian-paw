@@ -3,22 +3,22 @@ import { Frame, PillButton } from "@/components/ui";
 
 const articles = [
   {
-    title: "Senior pet care: how to keep aging pets comfortable",
+    title: "Senior pet care: how to support your pet as they get older",
     tag: "Resources",
     date: "May 7, 2024",
     image: "/images/news-1.png",
     dot: "bg-[#ffa0ea]",
   },
   {
-    title: "Summer safety tips for pets: keeping them cool and safe",
+    title: "Summer safety: keeping pets comfortable in Dubai's hotter months",
     tag: "Tips",
     date: "May 7, 2024",
     image: "/images/news-2.png",
     dot: "bg-[#97d4ff]",
   },
   {
-    title: "Senior pet care: how to keep aging pets comfortable",
-    tag: "Resources",
+    title: "Pet dental health: what owners should know about oral care",
+    tag: "Dental",
     date: "May 7, 2024",
     image: "/images/news-1.png",
     dot: "bg-[#ffa0ea]",
@@ -31,7 +31,7 @@ export function News() {
       <Frame>
       <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <h2 className="font-display text-[36px] uppercase leading-[60px] text-ink">
-          Browse articles & news
+          Health library
         </h2>
         <PillButton href="#faq" variant="olive">
           Browse All

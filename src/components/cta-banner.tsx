@@ -9,16 +9,16 @@ export function CtaBanner() {
           <div className="grid items-center gap-8 lg:grid-cols-[1fr_527px]">
             <div className="relative z-10">
               <h2 className="font-display text-[36px] uppercase leading-[40px] text-olive">
-                Schedule your
+                Your pet&apos;s next visit
                 <br />
-                appointment today!
+                starts here
               </h2>
               <p className="mt-6 max-w-[480px] text-[22px] leading-[24px] text-olive">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit
-                amet, consectetuer adipiscing elit,
+                Tell us a little about your pet and the reason for your visit. Our team will help
+                arrange the appropriate appointment.
               </p>
-              <PillButton href="#feedback" variant="olive" className="mt-8 w-[166px] px-0">
-                Book Online
+              <PillButton href="/contact" variant="olive" className="mt-8 w-[200px] px-0">
+                Book an Appointment
               </PillButton>
             </div>
             <div className="relative h-[280px] lg:h-[394px]">

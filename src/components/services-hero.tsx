@@ -5,7 +5,7 @@ export function ServicesHero() {
   return (
     <section className="pt-6 lg:pt-[28px]">
       <Frame>
-        <div className="relative min-h-[420px] overflow-hidden rounded-[12px] bg-sage sm:min-h-[520px] lg:h-[720px] lg:min-h-0">
+        <div className="hero-rise relative min-h-[420px] overflow-hidden rounded-[12px] bg-sage sm:min-h-[520px] lg:h-[720px] lg:min-h-0" style={{ animationDelay: "80ms" }}>
           <Image
             src="/images/services-hero-blend.png"
             alt=""
@@ -33,11 +33,11 @@ export function ServicesHero() {
 
           <article className="absolute left-4 top-[88px] z-10 flex h-[160px] w-[220px] cursor-pointer flex-col rounded-[12px] bg-[rgba(255,247,233,0.5)] p-4 backdrop-blur-[11.4px] transition-all duration-300 hover:-translate-y-1 hover:bg-[rgba(255,247,233,0.72)] sm:left-6 sm:h-[180px] sm:w-[240px] sm:p-5 lg:left-[81px] lg:top-[111px] lg:h-[217px] lg:w-[284px] lg:p-6">
             <h2 className="max-w-[141px] text-[16px] uppercase leading-4 text-black sm:text-[18px] sm:leading-5 lg:text-[20px]">
-              Check up for your pet
+              Clinical veterinary care
             </h2>
             <div className="mt-auto flex items-end justify-between gap-2">
               <p className="max-w-[115px] text-[12px] font-light leading-4 text-black sm:text-sm">
-                Comprehensive Diagnostic
+                Assessment, diagnosis and follow-up
               </p>
               <span className="relative size-8 shrink-0 overflow-clip sm:size-9">
                 <img src="/icons/arrow-circle.svg" alt="" className="size-full object-contain" />
@@ -47,7 +47,8 @@ export function ServicesHero() {
 
           <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-start justify-between gap-4 px-5 py-5 sm:flex-row sm:items-end sm:px-8 sm:py-8 lg:px-[89px] lg:py-10">
             <p className="max-w-[369px] text-[16px] leading-[22px] tracking-[-0.66px] text-black sm:text-[20px]">
-              Arabian Paws Vet Clinic is one of the premier veterinary clinics in Majan, Dubai.
+              Complete care. Specialised expertise. Veterinary services for routine healthcare,
+              unexpected illness and specialised treatment.
             </p>
             <PillButton
               href="#book"

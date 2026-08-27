@@ -4,29 +4,33 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Why is a strong brand identity important?",
+    question: "Where is Arabian Paws located?",
     answer:
-      "A robust brand identity and website serve as the face of your business, shaping how it is perceived by potential customers. They not only convey professionalism but also establish trust and credibility, vital factors in today's competitive market.",
+      "Arabian Paws Veterinary Clinic is located in Majan, Dubai, conveniently serving Majan, Al Barari and surrounding residential communities.",
   },
   {
-    question: "How long before I see results?",
+    question: "Is Arabian Paws open 24/7?",
     answer:
-      "Most pet owners notice clearer communication and easier booking within the first visit. Ongoing care plans typically show health improvements over a few weeks, depending on the treatment.",
+      "Yes. Arabian Paws provides 24/7 emergency veterinary services for pets requiring urgent care.",
   },
   {
-    question: "Can I cancel anytime?",
+    question: "Do you provide veterinary dental services?",
     answer:
-      "Yes. Wellness packages can be paused or cancelled with notice. Emergency and one-off clinical services are billed per visit.",
+      "Yes. Veterinary dentistry is one of our key areas of expertise, with specialised dental services supported by advanced technology.",
   },
   {
-    question: "Do you work with international clients?",
+    question: "Do you offer home veterinary care?",
     answer:
-      "Yes. Arabian Paws supports pet travel, relocation paperwork, and visiting pet owners across Dubai and the wider region.",
+      "Yes. Arabian Paws offers VIP home care for families looking for veterinary support at home.",
   },
   {
-    question: "What industries do you specialize in?",
+    question: "Is parking available?",
+    answer: "Yes. Complimentary customer parking is available at the clinic.",
+  },
+  {
+    question: "How can I book an appointment?",
     answer:
-      "We specialize in companion animal medicine, emergency care, dentistry, diagnostics, grooming, nutrition, and VIP home care.",
+      "You can book through our online booking system or contact the clinic directly.",
   },
 ];
 
@@ -39,7 +43,7 @@ export function Faq() {
       <h2 className="mb-16 text-center font-display text-[36px] uppercase leading-[40px] text-black">
         Questions?
         <br />
-        We&apos;re here to assist!
+        We&apos;re here to help.
       </h2>
 
       <div className="flex flex-col gap-5">

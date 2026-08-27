@@ -47,8 +47,8 @@ export function Testimonials() {
               our clients say
             </h2>
             <p className="mt-8 max-w-[480px] text-[22px] leading-[24px] text-olive">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit
-              amet, consectetuer adipiscing elit,
+              Experience you can rely on. Care you can see. Our team brings years of practical
+              experience across veterinary care, nursing and clinic administration.
             </p>
             <PillButton href="#feedback" variant="olive" className="mt-8 w-[166px] px-0">
               See All
@@ -58,32 +58,32 @@ export function Testimonials() {
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div className="flex flex-col gap-5 sm:pt-[72px]">
               <Card
-                quote="Lorem ipsum dolor sit amet consect adipiscing elit, sed do eiusmodfugiat tempor incididunt ut labore etnulla."
+                quote="Veterinary professionals with extensive hands-on experience caring for pets."
                 name="Andy Smith"
-                location="San Francisco, CA"
+                location="Majan, Dubai"
                 avatar="/images/avatar-milla.png"
                 className="bg-white"
               />
               <Card
-                quote="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                quote="A purpose-designed clinic with contemporary equipment and clinical spaces."
                 name="Sahara Connor"
-                location="New York, NY"
+                location="Al Barari, Dubai"
                 avatar="/images/avatar-milly.png"
                 className="bg-cream"
               />
             </div>
             <div className="flex flex-col gap-5">
               <Card
-                quote="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conse."
+                quote="Specialised veterinary dental care supported by advanced technology."
                 name="Milla Collins"
-                location="New York, NY"
+                location="Majan, Dubai"
                 avatar="/images/avatar-andy.png"
                 className="bg-white"
               />
               <Card
-                quote="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                quote="Premium veterinary services delivered with considered pricing and complimentary parking."
                 name="Milly Taylor"
-                location="San Francisco, CA"
+                location="Al Barari, Dubai"
                 avatar="/images/avatar-sahara.png"
                 className="bg-white"
               />

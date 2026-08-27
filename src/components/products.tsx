@@ -74,8 +74,8 @@ export function Products() {
           Our featured products
         </h2>
         <p className="mx-auto mt-3 max-w-[540px] text-center text-sm font-medium leading-[20px] text-muted">
-          Lorem ipsum dolor sit amet consectetur adipiselit sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua.
+          A considered selection of products and essentials for your pet, available conveniently at
+          Arabian Paws.
         </p>
 
         <div className="relative mx-auto mt-12 max-w-[932px]">
@@ -136,8 +136,7 @@ export function Products() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <p className="max-w-[480px] text-[22px] leading-[24px] text-olive">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit
-            amet, consectetuer adipiscing elit,
+            Visit our boutique for a considered selection of products and essentials for your pet.
           </p>
           <PillButton href="#gallery" variant="olive" className="w-[200px] px-0">
             See All

@@ -125,9 +125,8 @@ export function Services() {
           </PhotoCard>
 
           <p className="flex size-[314px] items-center px-1 text-[18px] leading-[22px] tracking-[-1px] text-black xl:col-start-1 xl:row-start-2">
-            Arabian Paws Vet Clinic is one of the premier veterinary clinics 🏥 in Majan,
-            Dubai 🇦🇪. We are a modern, multidisciplinary veterinary hospital offering a
-            full range of services 👩‍⚕️ for pets 🐶🐱.
+            Located in Majan, Dubai, our clinic provides comprehensive veterinary care in a modern,
+            thoughtfully designed environment, with particular expertise in veterinary dentistry.
           </p>
 
           <PhotoCard
@@ -199,7 +198,8 @@ export function Services() {
               Visit our all services
             </h3>
             <p className="absolute bottom-[28px] left-[26px] max-w-[358px] text-[20px] leading-[23px] text-white">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              Complete care. Specialised expertise. Support through routine healthcare, illness and
+              treatment.
             </p>
             <PillButton href="/services" variant="cream" className="absolute bottom-[18px] right-[18px]">
               See All

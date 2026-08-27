@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Frame } from "@/components/ui";
 
 const socials = [
-  { src: "/icons/social-instagram.svg", label: "Instagram", plain: true },
+  { src: "/icons/social-instagram.svg", label: "Instagram" },
   { src: "/icons/social-youtube.svg", label: "YouTube" },
   { src: "/icons/social-facebook.svg", label: "Facebook" },
   { src: "/icons/social-tiktok.svg", label: "TikTok" },
@@ -31,8 +31,8 @@ export function Gallery() {
           Follow us
         </h2>
         <p className="mx-auto max-w-[480px] text-center text-sm font-medium leading-[20px] text-muted">
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          molit anim id est laborum duis.
+          A spacious setting, contemporary facilities, and a clinic designed to make every part of
+          the veterinary experience more comfortable.
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -53,7 +53,7 @@ export function Gallery() {
               key={social.label}
               href="#gallery"
               aria-label={social.label}
-              className={`flex size-[39px] items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-110 ${social.plain ? "" : "rounded-full bg-cream"}`}
+              className="flex size-[39px] items-center justify-center overflow-hidden rounded-full bg-cream transition-transform duration-300 hover:scale-110"
             >
               <img src={social.src} alt="" className="size-[17px] object-contain" />
             </a>

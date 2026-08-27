@@ -30,8 +30,7 @@ export function Footer() {
           <div>
             <Logo variant="footer" />
             <p className="mt-6 max-w-[319px] text-base font-light leading-[24px] text-cream">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lorem ipsum dolor sit
-              amet, consectetuer adipiscing elit,
+              Exceptional Care. Healthier Smiles.
             </p>
           </div>
 
@@ -53,7 +52,18 @@ export function Footer() {
               <ul className="space-y-1 text-xs font-light leading-[22.5px]">
                 {extra.map((item) => (
                   <li key={item}>
-                    <a href="#about" className="hover:text-gold">
+                    <a
+                      href={
+                        item === "Contact"
+                          ? "/contact"
+                          : item === "Our Vets"
+                            ? "/about#vets"
+                            : item === "Health Library"
+                              ? "/#news"
+                              : "/about"
+                      }
+                      className="hover:text-gold"
+                    >
                       {item}
                     </a>
                   </li>
@@ -65,9 +75,8 @@ export function Footer() {
           <div>
             <p className="font-display text-lg text-cream">Contact</p>
             <p className="mt-4 text-xs font-light leading-[22.5px]">Majan, Dubai, UAE</p>
-            <p className="text-xs font-medium leading-[22.5px]">
-              contact@pet.com | (235) 834 - 9130
-            </p>
+            <p className="text-xs font-medium leading-[22.5px]">contact@arabianpaw.ae</p>
+            <p className="text-xs font-light leading-[22.5px]">24/7 Emergency Service</p>
           </div>
         </div>
 
@@ -80,7 +89,7 @@ export function Footer() {
                 exceptional care
               </h2>
               <div className="mt-6 flex flex-wrap gap-2 lg:justify-end">
-                <PillButton href="#book" variant="olive" icon="/icons/medical-footer.svg" size="sm">
+                <PillButton href="/contact" variant="olive" icon="/icons/medical-footer.svg" size="sm">
                   Book Online
                 </PillButton>
                 <PillButton

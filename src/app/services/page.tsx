@@ -11,7 +11,7 @@ import { Vets } from "@/components/vets";
 export const metadata = {
   title: "Services | Arabian Paws Veterinary Clinic",
   description:
-    "Explore Emergency & ICU, diagnostics, surgery, dentistry, grooming, nutrition, and VIP home care at Arabian Paws Vet Clinic in Majan, Dubai.",
+    "Complete care and specialised expertise at Arabian Paws in Majan, Dubai — clinical care, veterinary dentistry, 24/7 emergency, VIP home care, grooming and wellness.",
 };
 
 export default function ServicesPage() {

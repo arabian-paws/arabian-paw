@@ -30,7 +30,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Arabian Paws Veterinary Clinic | Dubai",
   description:
-    "Arabian Paws Vet Clinic is a premier multidisciplinary veterinary hospital in Majan, Dubai, offering 24/7 emergency care and a full range of pet services.",
+    "Where every paw finds expert care. Arabian Paws Veterinary Clinic in Majan, Dubai — 24/7 emergency service, veterinary care and specialised dental care.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

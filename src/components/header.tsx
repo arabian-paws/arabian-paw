@@ -8,7 +8,7 @@ import { PillButton } from "@/components/ui";
 
 const links = [
   { href: "/", label: "Home", match: "/" },
-  { href: "/#about", label: "About" },
+  { href: "/about", label: "About", match: "/about" },
   { href: "/services", label: "Features", match: "/services" },
   { href: "/#products", label: "Pricing" },
   { href: "/#news", label: "Blog" },
@@ -46,7 +46,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-1.5 lg:flex">
-          <PillButton href="#book" variant="sage" icon="/icons/medical.svg" size="sm">
+          <PillButton href="/contact" variant="sage" icon="/icons/medical.svg" size="sm">
             Book Online
           </PillButton>
           <PillButton href="/#emergency" variant="emergency" icon="/icons/medical-white.svg" size="sm">
@@ -87,7 +87,7 @@ export function Header() {
               </Link>
             );
           })}
-          <PillButton href="#book" variant="sage" icon="/icons/medical.svg" size="sm">
+          <PillButton href="/contact" variant="sage" icon="/icons/medical.svg" size="sm">
             Book Online
           </PillButton>
           <PillButton href="/#emergency" variant="emergency" icon="/icons/medical-white.svg" size="sm">

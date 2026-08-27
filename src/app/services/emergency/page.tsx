@@ -10,7 +10,7 @@ import { Testimonials } from "@/components/testimonials";
 export const metadata = {
   title: "24/7 Emergency & Critical Care | Arabian Paws",
   description:
-    "Round-the-clock emergency triage, ICU, poisoning and trauma care, and emergency surgery at Arabian Paws Vet Clinic in Majan, Dubai.",
+    "24/7 emergency veterinary care in Majan. Triage, ICU, trauma and poisoning management, emergency surgery, and continuous monitoring at Arabian Paws.",
 };
 
 export default function EmergencyServicePage() {
