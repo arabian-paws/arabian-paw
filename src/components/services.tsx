@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Frame, PillButton } from "@/components/ui";
 
 function Badge({ className = "" }: { className?: string }) {
@@ -35,15 +36,17 @@ function PhotoCard({
   titleClass = "text-olive",
   bg,
   className,
+  href,
   children,
 }: {
   title: string;
   titleClass?: string;
   bg: string;
   className: string;
+  href?: string;
   children: React.ReactNode;
 }) {
-  return (
+  const card = (
     <article
       className={`group relative size-[314px] overflow-hidden rounded-xl transition-transform duration-500 hover:-translate-y-1 ${bg} ${className}`}
     >
@@ -56,6 +59,16 @@ function PhotoCard({
       <Badge className="absolute bottom-[18px] right-[18px] z-20" />
     </article>
   );
+
+  if (href) {
+    return (
+      <Link href={href} className="block">
+        {card}
+      </Link>
+    );
+  }
+
+  return card;
 }
 
 function VipCard({ className }: { className: string }) {
@@ -80,7 +93,12 @@ export function Services() {
         </h2>
 
         <div className="mx-auto grid w-fit max-w-full grid-cols-1 justify-center justify-items-center gap-2 sm:grid-cols-2 xl:grid-cols-[repeat(4,314px)] xl:grid-rows-[repeat(4,314px)]">
-          <PhotoCard title="Emergency & ICU" bg="bg-gold" className="xl:col-start-1 xl:row-start-1">
+          <PhotoCard
+            title="Emergency & ICU"
+            bg="bg-gold"
+            href="/services/emergency"
+            className="xl:col-start-1 xl:row-start-1"
+          >
             <Animal
               src="/images/kitten.png"
               wrapClass="left-0 top-[9px] h-[305px] w-[314px]"
@@ -183,7 +201,7 @@ export function Services() {
             <p className="absolute bottom-[28px] left-[26px] max-w-[358px] text-[20px] leading-[23px] text-white">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
             </p>
-            <PillButton href="#book" variant="cream" className="absolute bottom-[18px] right-[18px]">
+            <PillButton href="/services" variant="cream" className="absolute bottom-[18px] right-[18px]">
               See All
             </PillButton>
           </article>

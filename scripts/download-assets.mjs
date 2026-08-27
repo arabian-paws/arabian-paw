@@ -122,6 +122,16 @@ const assets = {
     "https://www.figma.com/api/mcp/asset/8cf19c69-8d0a-4729-b8d1-607cf709ce5c.svg",
   "icons/flag-ae.svg":
     "https://www.figma.com/api/mcp/asset/af6931aa-9b98-4e39-819b-bebfab3268a5.svg",
+  "images/services-hero.png":
+    "https://www.figma.com/api/mcp/asset/a83e942c-311b-4b16-a7ec-5f0a6f0f2390.png",
+  "images/services-hero-blend.png":
+    "https://www.figma.com/api/mcp/asset/d79f55c5-82a4-434f-8761-72123d1d6778.png",
+  "icons/search.svg":
+    "https://www.figma.com/api/mcp/asset/6bc83efc-db15-482f-b0c3-e539d35f5c41.svg",
+  "icons/arrow-drop-down.svg":
+    "https://www.figma.com/api/mcp/asset/2feb54a6-f0da-44e3-b44e-4944fedbb5fd.svg",
+  "icons/medical-cream.svg":
+    "https://www.figma.com/api/mcp/asset/ee3e8d41-a2c5-435f-95f5-d0a71af51a23.svg",
 };
 
 const root = path.resolve("public");

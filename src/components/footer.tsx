@@ -41,7 +41,10 @@ export function Footer() {
               <ul className="space-y-1 text-xs font-light leading-[22.5px]">
                 {services.map((item) => (
                   <li key={item}>
-                    <a href="#services" className="hover:text-gold">
+                    <a
+                      href={item === "Emergency Care" ? "/services/emergency" : "/services"}
+                      className="hover:text-gold"
+                    >
                       {item}
                     </a>
                   </li>
@@ -81,7 +84,7 @@ export function Footer() {
                   Book Online
                 </PillButton>
                 <PillButton
-                  href="#emergency"
+                  href="/#emergency"
                   variant="cream"
                   icon="/icons/medical-footer-dark.svg"
                   size="sm"
