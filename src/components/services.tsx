@@ -71,16 +71,18 @@ function PhotoCard({
   return card;
 }
 
-function VipCard({ className }: { className: string }) {
+function VipCard({ className, href = "/services/vip-home-care" }: { className: string; href?: string }) {
   return (
-    <article
-      className={`group flex size-[314px] flex-col items-center justify-center gap-7 rounded-xl transition-transform duration-500 hover:-translate-y-1 ${className}`}
-    >
-      <h3 className="text-center font-display text-[23px] uppercase leading-[22px] text-olive">
-        VIP Home Care
-      </h3>
-      <Badge />
-    </article>
+    <Link href={href} className="block">
+      <article
+        className={`group flex size-[314px] flex-col items-center justify-center gap-7 rounded-xl transition-transform duration-500 hover:-translate-y-1 ${className}`}
+      >
+        <h3 className="text-center font-display text-[23px] uppercase leading-[22px] text-olive">
+          VIP Home Care
+        </h3>
+        <Badge />
+      </article>
+    </Link>
   );
 }
 
@@ -108,7 +110,7 @@ export function Services() {
 
           <VipCard className="xl:col-start-2 xl:row-start-1" />
 
-          <PhotoCard title="Diagnostics & Lab" bg="bg-cream" className="xl:col-start-3 xl:row-start-1">
+          <PhotoCard title="Diagnostics & Lab" bg="bg-cream" href="/services/diagnostics" className="xl:col-start-3 xl:row-start-1">
             <Animal
               src="/images/basenji.png"
               wrapClass="left-0 top-[68px] h-[246px] w-[314px]"
@@ -116,7 +118,7 @@ export function Services() {
             />
           </PhotoCard>
 
-          <PhotoCard title="Surgery" bg="bg-sage" className="xl:col-start-4 xl:row-start-1">
+          <PhotoCard title="Surgery" bg="bg-sage" href="/services/surgery" className="xl:col-start-4 xl:row-start-1">
             <Animal
               src="/images/hero-cat.png"
               wrapClass="inset-0"
@@ -133,6 +135,7 @@ export function Services() {
             title="Dentistry"
             titleClass="text-white"
             bg="bg-olive-muted"
+            href="/services/dentistry"
             className="xl:col-start-2 xl:row-start-2"
           >
             <Animal
@@ -144,7 +147,7 @@ export function Services() {
 
           <VipCard className="xl:col-start-3 xl:row-start-2" />
 
-          <PhotoCard title="Wellness & Vaccines" bg="bg-gold" className="xl:col-start-4 xl:row-start-2">
+          <PhotoCard title="Wellness & Vaccines" bg="bg-gold" href="/services/wellness" className="xl:col-start-4 xl:row-start-2">
             <Animal
               src="/images/cockatoo.png"
               wrapClass="left-0 top-[69px] h-[245px] w-[271px]"
@@ -152,7 +155,7 @@ export function Services() {
             />
           </PhotoCard>
 
-          <PhotoCard title="Grooming & Spa" bg="bg-gold" className="xl:col-start-1 xl:row-start-3">
+          <PhotoCard title="Grooming & Spa" bg="bg-gold" href="/services/grooming" className="xl:col-start-1 xl:row-start-3">
             <Animal
               src="/images/brown-dog.png"
               wrapClass="left-0 top-[11px] h-[303px] w-[314px]"
@@ -162,7 +165,7 @@ export function Services() {
 
           <VipCard className="xl:col-start-2 xl:row-start-3" />
 
-          <PhotoCard title="Travel & Relocation" bg="bg-cream" className="xl:col-start-3 xl:row-start-3">
+          <PhotoCard title="Travel & Relocation" bg="bg-cream" href="/services/travel" className="xl:col-start-3 xl:row-start-3">
             <Animal
               src="/images/husky.png"
               wrapClass="left-0 top-[46px] h-[268px] w-[314px]"
@@ -170,7 +173,7 @@ export function Services() {
             />
           </PhotoCard>
 
-          <PhotoCard title="Boutique & Accessories" bg="bg-sage" className="xl:col-start-4 xl:row-start-3">
+          <PhotoCard title="Boutique & Accessories" bg="bg-sage" href="/services/boutique" className="xl:col-start-4 xl:row-start-3">
             <Animal
               src="/images/red-cat.png"
               wrapClass="left-0 top-[63px] h-[251px] w-[314px]"
@@ -184,6 +187,7 @@ export function Services() {
             title="Pet Food & Nutrition"
             titleClass="text-white"
             bg="bg-olive-muted"
+            href="/services/nutrition"
             className="xl:col-start-2 xl:row-start-4"
           >
             <Animal

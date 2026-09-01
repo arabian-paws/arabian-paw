@@ -1,31 +1,5 @@
 import { Frame, PillButton } from "@/components/ui";
-
-const STATS = [
-  {
-    icon: "/icons/inner-clock.svg",
-    iconClass: "size-[43px]",
-    title: "24/7 Emergency",
-    subtitle: "Always Open",
-  },
-  {
-    icon: "/icons/inner-icu.svg",
-    iconClass: "size-11",
-    title: "Advance ICU",
-    subtitle: "Critical Care",
-  },
-  {
-    icon: "team",
-    iconClass: "h-[38px] w-[37px]",
-    title: "Expert Team",
-    subtitle: "Experienced Vets",
-  },
-  {
-    icon: "/icons/inner-facility.svg",
-    iconClass: "h-[38px] w-9",
-    title: "Modern Facility",
-    subtitle: "Latest Equipment",
-  },
-] as const;
+import type { ServicePageData } from "@/data/services";
 
 function ExpertTeamIcon() {
   return (
@@ -55,29 +29,37 @@ function ExpertTeamIcon() {
   );
 }
 
-export function InnerServiceHero() {
+export function InnerServiceHero({ service }: { service: ServicePageData }) {
   return (
     <section className="pt-6 lg:pt-[28px]">
       <Frame>
-        <div className="hero-rise relative overflow-hidden rounded-[12px] bg-gold lg:h-[720px]" style={{ animationDelay: "80ms" }}>
-          <div className="pointer-events-none absolute left-[414px] top-0 hidden h-[720px] w-[842px] overflow-hidden lg:block">
+        <div
+          className="hero-rise relative overflow-hidden rounded-[12px] bg-gold lg:h-[720px]"
+          style={{ animationDelay: "80ms" }}
+        >
+          <div
+            className={
+              service.heroWrapClass
+                ? `pointer-events-none absolute hidden overflow-hidden lg:block ${service.heroWrapClass}`
+                : "pointer-events-none absolute left-[414px] top-0 hidden h-[720px] w-[842px] overflow-hidden pt-10 lg:block"
+            }
+          >
             <img
-              src="/images/inner-hero-cat.png"
+              src={service.heroImage}
               alt=""
-              className="absolute left-[-9.66%] top-[-13.61%] h-[166.51%] max-w-none w-[130.78%]"
+              className={service.heroImageClass ?? "size-full object-contain object-bottom"}
             />
           </div>
 
-          <div className="relative z-10 flex flex-col gap-6 px-5 py-8 sm:gap-[33px] sm:px-8 sm:py-10 lg:absolute lg:left-[57px] lg:top-[59px] lg:w-[425px] lg:p-0">
+          <div className="relative z-10 flex flex-col gap-6 px-5 py-8 sm:gap-[33px] sm:px-8 sm:py-10 lg:absolute lg:left-[57px] lg:top-[59px] lg:w-[560px] lg:p-0">
             <p className="font-display text-[22px] uppercase leading-[26px] text-olive sm:text-[27px] sm:leading-[26px]">
-              Emergency & ICU
+              {service.eyebrow}
             </p>
             <h1 className="font-display text-[34px] uppercase leading-[36px] text-olive sm:text-[46px] sm:leading-[43px]">
-              When every minute matters
+              {service.headline}
             </h1>
-            <p className="max-w-[369px] text-[18px] leading-[22px] tracking-[-0.66px] text-black sm:text-[20px]">
-              Round-the-clock emergency and critical care for pets requiring immediate attention in
-              Majan.
+            <p className="max-w-[520px] text-[18px] leading-[22px] tracking-[-0.66px] text-black sm:text-[20px]">
+              {service.intro}
             </p>
             <div className="flex flex-col items-start gap-3 sm:flex-row sm:gap-[18px]">
               <PillButton
@@ -88,7 +70,7 @@ export function InnerServiceHero() {
               >
                 Open 24/7 • Emergency Service
               </PillButton>
-              <PillButton href="#book" variant="olive" icon="/icons/medical-cream.svg" size="sm">
+              <PillButton href="/contact" variant="olive" icon="/icons/medical-cream.svg" size="sm">
                 Book Online
               </PillButton>
             </div>
@@ -96,14 +78,14 @@ export function InnerServiceHero() {
 
           <div className="relative mx-5 mb-6 h-[240px] overflow-hidden rounded-[12px] sm:mx-8 sm:h-[320px] lg:hidden">
             <img
-              src="/images/inner-hero-cat.png"
-              alt="Ginger and white kitten"
-              className="size-full object-cover object-[center_20%]"
+              src={service.heroImage}
+              alt={service.heroAlt}
+              className="size-full object-contain object-bottom"
             />
           </div>
 
           <div className="relative z-10 mx-5 mb-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-5 rounded-[7px] bg-[rgba(255,247,233,0.5)] px-4 py-5 backdrop-blur-[7px] sm:mx-8 lg:absolute lg:left-[57px] lg:top-[543px] lg:mx-0 lg:mb-0 lg:h-[117px] lg:w-[814px] lg:gap-[33px] lg:px-0 lg:py-0">
-            {STATS.map((stat) => (
+            {service.stats.map((stat) => (
               <div key={stat.title} className="flex items-center gap-[13px]">
                 {stat.icon === "team" ? (
                   <ExpertTeamIcon />
@@ -126,7 +108,7 @@ export function InnerServiceHero() {
               className="h-[34px] w-7 object-contain lg:h-[49px] lg:w-[41px]"
             />
             <p className="w-[100px] text-center text-[11px] leading-[13px] tracking-[-0.45px] text-white lg:w-[141px] lg:text-[14px] lg:leading-[15px]">
-              Dubai Trusted Emergency Veterinary Hospital
+              {service.badge}
             </p>
           </div>
         </div>

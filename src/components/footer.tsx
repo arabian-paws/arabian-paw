@@ -12,7 +12,20 @@ const services = [
   "Wellness Packages",
 ];
 
-const extra = ["Pet Boutique", "Our Vets", "Health Library", "Contact"];
+const serviceLinks: Record<string, string> = {
+  "Clinical Services": "/services",
+  "Emergency Care": "/services/emergency",
+  "VIP Home Care": "/services/vip-home-care",
+  "Grooming & Spa": "/services/grooming",
+  "Wellness Packages": "/services/wellness",
+};
+
+const extraLinks: Record<string, string> = {
+  "Pet Boutique": "/services/boutique",
+  "Our Vets": "/about#vets",
+  "Health Library": "/#news",
+  Contact: "/contact",
+};
 
 export function Footer() {
   return (
@@ -40,30 +53,16 @@ export function Footer() {
               <ul className="space-y-1 text-xs font-light leading-[22.5px]">
                 {services.map((item) => (
                   <li key={item}>
-                    <a
-                      href={item === "Emergency Care" ? "/services/emergency" : "/services"}
-                      className="hover:text-gold"
-                    >
+                    <a href={serviceLinks[item] ?? "/services"} className="hover:text-gold">
                       {item}
                     </a>
                   </li>
                 ))}
               </ul>
               <ul className="space-y-1 text-xs font-light leading-[22.5px]">
-                {extra.map((item) => (
+                {Object.keys(extraLinks).map((item) => (
                   <li key={item}>
-                    <a
-                      href={
-                        item === "Contact"
-                          ? "/contact"
-                          : item === "Our Vets"
-                            ? "/about#vets"
-                            : item === "Health Library"
-                              ? "/#news"
-                              : "/about"
-                      }
-                      className="hover:text-gold"
-                    >
+                    <a href={extraLinks[item]} className="hover:text-gold">
                       {item}
                     </a>
                   </li>
@@ -106,13 +105,13 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute bottom-0 left-0 z-20 hidden h-[500px] w-[400px] lg:block">
+      <div className="pointer-events-none absolute bottom-0 left-0 z-20 hidden h-[560px] w-[460px] lg:block">
         <Image
-          src="/images/footer-pets.png"
+          src="/images/footer-cat-dog.png"
           alt="Cat and dog"
           fill
-          className="object-contain object-left-bottom"
-          sizes="400px"
+          className="object-contain object-left-bottom mix-blend-screen"
+          sizes="460px"
         />
       </div>
     </footer>

@@ -7,7 +7,7 @@ import { Hero } from "@/components/hero";
 import { News } from "@/components/news";
 import { Products } from "@/components/products";
 import { Reveal } from "@/components/reveal";
-import { Services } from "@/components/services";
+import { ServicesCatalog } from "@/components/services-catalog";
 import { Testimonials } from "@/components/testimonials";
 import { Vets } from "@/components/vets";
 
@@ -19,7 +19,7 @@ export default function Home() {
         <About />
       </Reveal>
       <Reveal>
-        <Services />
+        <ServicesCatalog showFilters={false} />
       </Reveal>
       <Reveal>
         <Vets />

@@ -90,13 +90,15 @@ function PhotoCard({
 function TextCard({
   title,
   className,
+  href,
   children,
 }: {
   title: string;
   className: string;
+  href?: string;
   children: React.ReactNode;
 }) {
-  return (
+  const card = (
     <article
       className={`group flex size-[314px] flex-col items-center justify-center gap-7 rounded-xl px-12 transition-transform duration-500 hover:-translate-y-1 ${className}`}
     >
@@ -106,6 +108,16 @@ function TextCard({
       {children}
     </article>
   );
+
+  if (href) {
+    return (
+      <Link href={href} className="block">
+        {card}
+      </Link>
+    );
+  }
+
+  return card;
 }
 
 type CatalogItem = {
@@ -139,7 +151,7 @@ function items(): CatalogItem[] {
       searchable: true,
       gridClass: "xl:col-start-2 xl:row-start-1",
       node: (
-        <TextCard title="VIP Home Care" className="">
+        <TextCard title="VIP Home Care" href="/services/vip-home-care" className="">
           <Badge />
         </TextCard>
       ),
@@ -150,7 +162,7 @@ function items(): CatalogItem[] {
       searchable: true,
       gridClass: "xl:col-start-3 xl:row-start-1",
       node: (
-        <PhotoCard title="Diagnostics & Lab" bg="bg-cream" className="">
+        <PhotoCard title="Diagnostics & Lab" bg="bg-cream" href="/services/diagnostics" className="">
           <Animal
             src="/images/basenji.png"
             wrapClass="left-0 top-[68px] h-[246px] w-[314px]"
@@ -165,7 +177,7 @@ function items(): CatalogItem[] {
       searchable: true,
       gridClass: "xl:col-start-4 xl:row-start-1",
       node: (
-        <PhotoCard title="Surgery" bg="bg-sage" className="">
+        <PhotoCard title="Surgery" bg="bg-sage" href="/services/surgery" className="">
           <Animal
             src="/images/hero-cat.png"
             wrapClass="inset-0"
@@ -192,7 +204,7 @@ function items(): CatalogItem[] {
       searchable: true,
       gridClass: "xl:col-start-2 xl:row-start-2",
       node: (
-        <PhotoCard title="Dentistry" titleClass="text-white" bg="bg-olive-muted" className="">
+        <PhotoCard title="Dentistry" titleClass="text-white" bg="bg-olive-muted" href="/services/dentistry" className="">
           <Animal
             src="/images/rabbit.png"
             wrapClass="left-[10px] top-[54px] h-[260px] w-[294px]"
@@ -207,7 +219,7 @@ function items(): CatalogItem[] {
       searchable: true,
       gridClass: "xl:col-start-3 xl:row-start-2",
       node: (
-        <TextCard title="Travel & Relocation" className="">
+        <TextCard title="Travel & Relocation" href="/services/travel" className="">
           <Badge />
         </TextCard>
       ),
@@ -218,7 +230,7 @@ function items(): CatalogItem[] {
       searchable: true,
       gridClass: "xl:col-start-4 xl:row-start-2",
       node: (
-        <PhotoCard title="Wellness & Vaccines" bg="bg-gold" className="">
+        <PhotoCard title="Wellness & Vaccines" bg="bg-gold" href="/services/wellness" className="">
           <Animal
             src="/images/cockatoo.png"
             wrapClass="left-0 top-[69px] h-[245px] w-[271px]"
@@ -233,7 +245,7 @@ function items(): CatalogItem[] {
       searchable: true,
       gridClass: "xl:col-start-1 xl:row-start-3",
       node: (
-        <PhotoCard title="Grooming & Spa" bg="bg-gold" className="">
+        <PhotoCard title="Grooming & Spa" bg="bg-gold" href="/services/grooming" className="">
           <Animal
             src="/images/brown-dog.png"
             wrapClass="left-0 top-[11px] h-[303px] w-[314px]"
@@ -249,7 +261,7 @@ function items(): CatalogItem[] {
       gridClass: "xl:col-start-2 xl:row-start-3",
       node: (
         <TextCard title="Book our consultation" className="">
-          <PillButton href="#book" variant="ghost" className="h-[48px] px-8 text-[18px]">
+          <PillButton href="/contact" variant="ghost" className="h-[48px] px-8 text-[18px]">
             Book Online
           </PillButton>
         </TextCard>
@@ -265,6 +277,7 @@ function items(): CatalogItem[] {
           title="Pet Food & Nutrition"
           titleClass="text-white"
           bg="bg-olive-muted"
+          href="/services/nutrition"
           className=""
         >
           <Animal
@@ -281,7 +294,7 @@ function items(): CatalogItem[] {
       searchable: true,
       gridClass: "xl:col-start-4 xl:row-start-3",
       node: (
-        <PhotoCard title="Boutique & Accessories" bg="bg-sage" className="">
+        <PhotoCard title="Boutique & Accessories" bg="bg-sage" href="/services/boutique" className="">
           <Animal
             src="/images/red-cat.png"
             wrapClass="left-0 top-[63px] h-[251px] w-[314px]"
@@ -293,12 +306,13 @@ function items(): CatalogItem[] {
   ];
 }
 
-export function ServicesCatalog() {
+export function ServicesCatalog({ showFilters = true }: { showFilters?: boolean }) {
   const [department, setDepartment] = useState("");
   const [query, setQuery] = useState("");
   const catalog = useMemo(() => items(), []);
 
   const filtered = catalog.filter((item) => {
+    if (!showFilters) return true;
     const hay = item.title.toLowerCase();
     const matchesQuery = !query.trim() || hay.includes(query.trim().toLowerCase());
     const matchesDept = !department || item.title === department;
@@ -308,15 +322,20 @@ export function ServicesCatalog() {
     return matchesQuery && matchesDept;
   });
 
-  const isDefault = !department && !query.trim();
+  const isDefault = !showFilters || (!department && !query.trim());
 
   return (
-    <section id="services" className="pb-8 pt-10 lg:pt-[82px]">
+    <section id="services" className={showFilters ? "pb-8 pt-10 lg:pt-[82px]" : "pb-8 pt-4"}>
       <Frame>
-        <h2 className="mb-10 text-center font-display text-[32px] uppercase leading-[34px] text-olive lg:mb-[70px] lg:text-[36px]">
+        <h2
+          className={`mb-10 text-center font-display text-[32px] uppercase leading-[34px] text-olive lg:text-[36px] ${
+            showFilters ? "lg:mb-[70px]" : ""
+          }`}
+        >
           Services of our clinic
         </h2>
 
+        {showFilters ? (
         <div className="mb-[88px] flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <label className="relative block h-[57px] w-full max-w-[506px]">
             <span className="sr-only">Choose a department</span>
@@ -351,6 +370,7 @@ export function ServicesCatalog() {
             />
           </label>
         </div>
+        ) : null}
 
         <div className="mx-auto grid w-fit max-w-full grid-cols-1 justify-center justify-items-center gap-2 sm:grid-cols-2 xl:grid-cols-[repeat(4,314px)] xl:grid-rows-[repeat(3,314px)]">
           {filtered.length ? (
