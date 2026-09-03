@@ -7,7 +7,7 @@ import { Logo } from "@/components/logo";
 import { PillButton } from "@/components/ui";
 import { SERVICES } from "@/data/services";
 
-const links = [
+const links: { href: string; label: string; match?: string; exact?: boolean }[] = [
   { href: "/", label: "Home", match: "/" },
   { href: "/about", label: "About", match: "/about" },
   { href: "/our-vets", label: "Our Vets", match: "/our-vets" },
