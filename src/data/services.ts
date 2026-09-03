@@ -44,9 +44,9 @@ export const SERVICES: ServicePageData[] = [
     slug: "emergency",
     catalogTitle: "Emergency & ICU",
     eyebrow: "Emergency & ICU",
-    headline: "When every minute matters",
+    headline: "24/7 Emergency & Intensive Care",
     intro:
-      "Round-the-clock emergency and critical care for pets requiring immediate attention in Majan.",
+      "Round the clock emergency and intensive care for pets requiring immediate attention, with rapid triage, dedicated ICU support, continuous monitoring and advanced emergency treatment.",
     heroImage: "/images/inner-hero-cat.png",
     heroAlt: "Ginger and white kitten",
     badge: "Dubai Trusted Emergency Veterinary Hospital",
@@ -76,46 +76,42 @@ export const SERVICES: ServicePageData[] = [
     ],
     blocks: [
       {
-        title: "Emergency Triage & Stabilisation",
-        body: "Rapid assessment and immediate support for pets requiring urgent attention.",
+        title: "Emergency Triage & Stabilization",
+        body: "We provide rapid assessment, stabilisation and urgent care, with dedicated ICU support for cases requiring closer attention.",
         image: "/images/inner-triage.png",
         alt: "Veterinarian examining a puppy during emergency triage",
       },
       {
-        title: "Intensive Care",
-        body: "Dedicated ICU support for patients who require close observation and ongoing treatment.",
+        title: "Intensive Care Unit (ICU)",
+        body: "With oxygen therapy, vital monitoring, blood transfusions and post-operative support, patients remain under close observation throughout their recovery.",
         image: "/images/inner-icu.png",
         alt: "Dog receiving intensive care monitoring",
       },
       {
-        title: "Trauma & Poisoning Management",
-        body: "Prompt assessment and treatment for serious injuries, suspected poisoning and other urgent conditions.",
+        title: "Poisoning & Trauma Management",
+        body: "From heatstroke and toxic ingestion to road accidents and severe bites, emergencies require a fast and focused response. Our team works quickly to assess the situation, stabilise your pet and begin the appropriate treatment.",
         image: "/images/inner-trauma.png",
         alt: "Veterinarian examining a cat after trauma",
       },
       {
-        title: "Emergency Surgery",
-        body: "Surgical intervention when an emergency requires immediate treatment.",
+        title: "Emergency Surgeries",
+        body: "When surgery cannot wait, our team is equipped to manage a range of urgent procedures. From C-sections and pyometra surgery to GDV, foreign body removal, emergency cystotomy and trauma reconstruction, we provide timely surgical care when it matters most.",
         image: "/images/inner-surgery.png",
         alt: "Veterinary team performing emergency surgery",
       },
     ],
     reasonsTitle: "Key Reasons Why Your Pet Needs Emergency Care",
     reasonsIntro:
-      "Do not wait if your pet is showing signs of a serious medical problem. Contact Arabian Paws for immediate veterinary assistance.",
+      "If your pet is showing signs of a serious medical problem, seek veterinary care without delay. Arabian Paws is available 24/7 for emergency assistance.",
     reasons: [
-      "Immediate Treatment For Life-Threatening Injuries Or Illnesses",
-      "Safe Blood Transfusions For Anaemia & Blood Loss",
-      "24/7 Access To Skilled Veterinarians, Even On Weekends & Holidays",
-      "Oxygen & IV Fluid Therapy For Pets In Respiratory Distress",
-      "Rapid Diagnosis With On-Site X-Ray, Ultrasound & Lab Testing",
-      "Support From Specialists In Cardiology, Neurology & Surgery",
-      "Continuous Monitoring & Intensive Care For Critical Patients",
-      "Compassionate Care To Keep Pets Calm & Comfortable",
-      "Expert Pain Relief & Stabilization For Trauma Or Shock",
-      "Prevention Tips To Help Reduce Future Emergencies",
-      "Emergency Surgery Available For Severe Wounds & Internal Bleeding",
-      "24/7 Emergency Hotline & Veterinary Support At Arabian Paws",
+      "Immediate Treatment",
+      "Breathing Difficulties",
+      "Severe Blood Loss",
+      "Poisoning or Toxic Ingestion",
+      "Serious Trauma",
+      "Critical Illness",
+      "Emergency Surgery",
+      "Rapid Diagnosis",
     ],
   },
   {
@@ -124,11 +120,11 @@ export const SERVICES: ServicePageData[] = [
     eyebrow: "Diagnostics & Labs",
     headline: "Advanced Diagnostics & In-House Laboratory",
     intro:
-      "Accurate diagnosis starts with the right information. Our advanced diagnostic services combine high-resolution imaging, in-house laboratory testing and specialised referrals to help our veterinary team assess your pet with greater precision and make informed treatment decisions.",
+      "Advanced diagnostic services help our veterinary team identify health concerns accurately and make informed treatment decisions for your pet.",
     heroImage: "/images/basenji.png",
     heroAlt: "Basenji dog",
-    heroWrapClass: "right-8 top-10 h-[500px] w-[540px]",
-    heroImageClass: "size-full object-contain object-center",
+    heroWrapClass: "left-[500px] bottom-0 h-[1000px] w-[842px]",
+    heroImageClass: "size-full object-contain object-right-bottom",
     badge: "In-House Imaging & Laboratory",
     metaTitle: "Diagnostics & In-House Lab | Arabian Paws",
     metaDescription:
@@ -150,8 +146,8 @@ export const SERVICES: ServicePageData[] = [
       {
         icon: "/icons/inner-clock.svg",
         iconClass: "size-[43px]",
-        title: "Same-Day Labs",
-        subtitle: "In-House Results",
+        title: "Allergy Testing",
+        subtitle: "Targeted Diagnostics",
       },
     ],
     blocks: [
@@ -200,7 +196,7 @@ export const SERVICES: ServicePageData[] = [
     eyebrow: "Surgery",
     headline: "Advanced Surgical Care, Delivered With Precision",
     intro:
-      "From routine procedures to complex surgical intervention, Arabian Paws provides a considered approach to veterinary surgery. Our surgical services cover soft tissue, orthopaedic and minimally invasive procedures, with careful monitoring and treatment tailored to each patient.",
+      "From routine procedures to complex surgeries, our veterinary surgical services are tailored to each patient, with careful monitoring and expert care throughout.",
     heroImage: "/images/hero-cat.png",
     heroAlt: "Grey cat",
     badge: "Precision Surgical Care",
@@ -224,8 +220,8 @@ export const SERVICES: ServicePageData[] = [
       {
         icon: "/icons/inner-clock.svg",
         iconClass: "size-[43px]",
-        title: "Monitored",
-        subtitle: "Anaesthesia",
+        title: "Spay & Neuter",
+        subtitle: "Routine Procedures",
       },
     ],
     blocks: [
@@ -280,7 +276,7 @@ export const SERVICES: ServicePageData[] = [
     eyebrow: "Dentistry",
     headline: "Advanced Veterinary Dentistry & Oral Surgery",
     intro:
-      "Your pet’s oral health deserves more than routine cleaning. Arabian Paws provides specialised dental and oral surgical care, from professional scaling and digital dental imaging to complex extractions and oral surgery, with each procedure carefully planned around the patient.",
+      "Specialised dental care, from professional cleaning and digital imaging to extractions and oral surgery, tailored to your pet’s needs.",
     heroImage: "/images/rabbit.png",
     heroAlt: "Rabbit",
     badge: "Specialised Dental Care",
@@ -304,32 +300,32 @@ export const SERVICES: ServicePageData[] = [
       {
         icon: "/icons/inner-clock.svg",
         iconClass: "size-[43px]",
-        title: "Oral Surgery",
-        subtitle: "Planned Care",
+        title: "Tooth Extractions",
+        subtitle: "Expert Care",
       },
     ],
     blocks: [
       {
         title: "Ultrasonic Scaling & Polishing",
-        body: "Professional ultrasonic scaling removes plaque and tartar that routine brushing cannot reach. The procedure is performed under safe anaesthesia, allowing thorough cleaning and polishing while keeping your pet comfortable.",
+        body: "Professional ultrasonic scaling removes plaque and tartar, followed by thorough cleaning and polishing under safe anaesthesia to keep your pet comfortable.",
         image: "/images/svc/dental-exam.jpg",
         alt: "Veterinarian examining a dachshund’s teeth during dental scaling",
       },
       {
         title: "Dental Digital X-Rays",
-        body: "Dental problems can often extend below the gumline. Digital dental X-rays allow our veterinary team to assess tooth roots and identify sub-gingival disease that may not be visible during an external examination.",
+        body: "Digital dental X-rays reveal hidden issues below the gumline, helping our veterinary team assess tooth roots and detect sub-gingival disease.",
         image: "/images/svc/diagnostics-tool.jpg",
         alt: "Veterinarian using a diagnostic imaging device on a dog",
       },
       {
         title: "Tooth Extractions & Endodontics",
-        body: "Fractured, infected or severely decayed teeth may require more advanced treatment. Our dental services include tooth extractions and endodontic procedures to address affected teeth while supporting your pet’s oral health.",
+        body: "Advanced dental care, including tooth extractions and endodontic procedures, to treat affected teeth and support your pet’s oral health.",
         image: "/images/inner-trauma.png",
         alt: "Veterinarian treating a cat during an oral procedure",
       },
       {
         title: "Oral Tumour & Jaw Surgery",
-        body: "Some oral conditions require surgical intervention beyond routine dental care. We provide specialised oral and jaw procedures, including reconstructive and oncological surgery, based on the individual condition and treatment requirements.",
+        body: "Specialised oral and jaw surgery, including reconstructive and oncological procedures, tailored to each pet’s condition and needs.",
         image: "/images/inner-surgery.png",
         alt: "Veterinary surgical team operating on a cat",
       },
@@ -354,7 +350,7 @@ export const SERVICES: ServicePageData[] = [
     eyebrow: "VIP Home Care",
     headline: "Exceptional Veterinary Care In the Comfort of Home",
     intro:
-      "For pets who are more comfortable in familiar surroundings, Arabian Paws brings veterinary care directly to your doorstep. From routine visits and diagnostics to private end-of-life care and dedicated pet transport, our VIP services are designed around convenience, comfort and individual attention.",
+      "VIP veterinary care at your doorstep, from routine visits and diagnostics to pet transport and private end-of-life care, designed around comfort and convenience.",
     heroImage: "/images/vip-home-care.png",
     heroAlt: "Woman holding a white puppy",
     heroWrapClass: "right-6 top-8 h-[520px] w-[600px]",
@@ -373,14 +369,14 @@ export const SERVICES: ServicePageData[] = [
       {
         icon: "/icons/inner-icu.svg",
         iconClass: "size-11",
-        title: "Diagnostics",
+        title: "Blood Collection",
         subtitle: "In-Home Sampling",
       },
       teamStat,
       {
         icon: "/icons/inner-facility.svg",
         iconClass: "h-[38px] w-9",
-        title: "Pet Taxi",
+        title: "Pet Taxi Service",
         subtitle: "Pick-Up & Drop-Off",
       },
     ],
@@ -393,19 +389,19 @@ export const SERVICES: ServicePageData[] = [
       },
       {
         title: "In-Home Blood Collection & Diagnostics",
-        body: "Some pets find clinic visits stressful. Our in-home blood collection service allows samples to be collected from the comfort of your villa, helping make the process calmer and more convenient for both pets and their owners.",
+        body: "In-home blood collection provides a calmer, more convenient experience, allowing samples to be collected comfortably at home.",
         image: "/images/svc/injection.jpg",
         alt: "Veterinary team drawing a blood sample from a dog",
       },
       {
         title: "Pet Taxi | Pick-Up & Drop-Off",
-        body: "Getting your pet to and from the clinic should be effortless. Our luxury, climate-controlled pet taxi provides comfortable transportation for hospital procedures, veterinary visits and grooming appointments.",
+        body: "Luxury, climate-controlled pet transport for comfortable and convenient travel to veterinary, hospital and grooming appointments.",
         image: "/images/svc/cat-carrier.jpg",
         alt: "Cat sitting in a travel basket ready for pet taxi",
       },
       {
         title: "Compassionate In-Home Euthanasia",
-        body: "When the time comes to say goodbye, familiar surroundings can offer comfort and privacy. Our in-home euthanasia service provides peaceful, compassionate end-of-life care in the comfort of your pet’s home, allowing families to have a quiet and private farewell.",
+        body: "In-home euthanasia provides peaceful, compassionate end-of-life care in familiar surroundings, offering pets comfort and families a private, quiet farewell.",
         image: "/images/svc/cat-stethoscope.jpg",
         alt: "Veterinarian gently examining a white cat",
       },
@@ -430,7 +426,7 @@ export const SERVICES: ServicePageData[] = [
     eyebrow: "Wellness & Vaccines",
     headline: "Preventive Care for a Healthier & Longer Life",
     intro:
-      "Proactive wellness care designed to support your pet at every stage of life, from puppy and kittenhood through their senior years, with comprehensive health exams, tailored vaccinations, nutrition guidance and preventive care.",
+      "Proactive wellness care for every stage of life, from puppy and kittenhood to the senior years, with health exams, vaccinations, nutrition guidance and preventive care.",
     heroImage: "/images/cockatoo.png",
     heroAlt: "Cockatoo",
     badge: "Preventive Care For Every Stage",
@@ -447,15 +443,15 @@ export const SERVICES: ServicePageData[] = [
       {
         icon: "/icons/inner-icu.svg",
         iconClass: "size-11",
-        title: "Vaccinations",
+        title: "Vaccination Plans",
         subtitle: "Tailored Plans",
       },
       teamStat,
       {
         icon: "/icons/inner-facility.svg",
         iconClass: "h-[38px] w-9",
-        title: "Microchipping",
-        subtitle: "UAE Registration",
+        title: "Weight Management",
+        subtitle: "Healthy Lifestyle",
       },
     ],
     blocks: [
@@ -479,7 +475,7 @@ export const SERVICES: ServicePageData[] = [
       },
       {
         title: "Pediatric & Senior Pet Care",
-        body: "From growing puppies and kittens to ageing companions, we provide age-specific wellness plans designed around their changing needs, including developmental care, senior health monitoring and joint health support.",
+        body: "Age-specific wellness plans for puppies, kittens and senior pets, with developmental care, health monitoring and joint support tailored to their changing needs.",
         image: "/images/svc/exam-senior.jpg",
         alt: "Veterinarian examining a senior German Shepherd",
       },
@@ -515,7 +511,7 @@ export const SERVICES: ServicePageData[] = [
       {
         icon: "/icons/inner-facility.svg",
         iconClass: "h-[38px] w-9",
-        title: "Breed Styling",
+        title: "Breed-Specific Styling",
         subtitle: "Tailored Cuts",
       },
       {
@@ -589,14 +585,14 @@ export const SERVICES: ServicePageData[] = [
       {
         icon: "/icons/inner-facility.svg",
         iconClass: "h-[38px] w-9",
-        title: "Export Papers",
-        subtitle: "Certification",
+        title: "Export Certification",
+        subtitle: "Travel Documentation",
       },
       {
         icon: "/icons/inner-icu.svg",
         iconClass: "size-11",
         title: "Fit-to-Fly",
-        subtitle: "Health Checks",
+        subtitle: "Health Certificates",
       },
       teamStat,
       {
@@ -609,7 +605,7 @@ export const SERVICES: ServicePageData[] = [
     blocks: [
       {
         title: "Pet Travel & Export Certification",
-        body: "Planning an international move with your pet? We provide the required veterinary documentation and certification to help prepare your pet for travel and meet destination requirements.",
+        body: "International pet travel support with veterinary documentation and certification to help meet destination requirements and prepare your pet for a smooth journey.",
         image: "/images/svc/clinic-team.jpg",
         alt: "Veterinary team examining a dog for travel certification",
       },
@@ -633,7 +629,7 @@ export const SERVICES: ServicePageData[] = [
       },
       {
         title: "Insurance Claim Processing",
-        body: "We provide direct assistance with insurance claim processing and documentation, helping make the reimbursement process easier for eligible veterinary treatments with major UAE pet insurance providers.",
+        body: "We assist with insurance claims and documentation, making reimbursement for eligible veterinary treatments easier with major UAE pet insurance providers.",
         image: "/images/svc/vet-records.jpg",
         alt: "Veterinarian with a dog beside clinic records for an insurance claim",
       },
@@ -730,7 +726,7 @@ export const SERVICES: ServicePageData[] = [
     eyebrow: "Pet Food & Nutrition",
     headline: "Better Nutrition for a Healthier Pet",
     intro:
-      "Nutrition plays a major role in your pet’s overall health, energy and longevity. We offer carefully selected food and treats, including prescription diets and organic options, based on your pet’s individual nutritional needs.",
+      "Nutritional care tailored to your pet’s needs, with carefully selected food, treats, prescription diets and organic options to support their health and wellbeing.",
     heroImage: "/images/hero-cat.png",
     heroAlt: "Grey cat",
     badge: "Nutrition Tailored To Your Pet",
@@ -747,15 +743,15 @@ export const SERVICES: ServicePageData[] = [
       {
         icon: "/icons/inner-icu.svg",
         iconClass: "size-11",
-        title: "Prescription",
-        subtitle: "Diet Plans",
+        title: "Organic Treats",
+        subtitle: "Natural Choices",
       },
       teamStat,
       {
         icon: "/icons/inner-clock.svg",
         iconClass: "size-[43px]",
-        title: "Organic",
-        subtitle: "Treats & Raw",
+        title: "Prescription Diets",
+        subtitle: "Specialist Nutrition",
       },
     ],
     blocks: [

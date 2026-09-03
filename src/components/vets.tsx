@@ -32,7 +32,7 @@ export function Vets() {
     >
       <Frame className="relative z-10">
         <h2 className="mb-8 text-center font-display text-[36px] uppercase leading-[34px] text-olive">
-          OUR VETS
+          Meet Our Team
         </h2>
         <div className="grid items-start gap-6 md:grid-cols-3">
           {vets.map((vet) => (
@@ -59,13 +59,15 @@ export function Vets() {
         </div>
         <div className="mt-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <p className="max-w-[480px] text-[22px] leading-[24px] text-olive">
-            Experience behind every decision. Our founding team brings together veterinary, nursing
-            and administrative expertise.
+            Our founding team brings together veterinary, nursing and administrative expertise, with years of experience working in professional veterinary environments.
           </p>
-          <PillButton href="/about#vets" variant="olive" className="w-[200px] px-0">
+          <PillButton href="/our-vets" variant="olive" className="w-[200px] px-0">
             Meet Our Team
           </PillButton>
         </div>
+        <p className="mt-4 text-center text-[14px] italic leading-[20px] text-olive/50">
+          Additional team profiles to be added once final names and qualifications are confirmed.
+        </p>
       </Frame>
     </section>
   );

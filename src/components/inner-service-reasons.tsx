@@ -24,10 +24,10 @@ export function InnerServiceReasons({
             {reasons.map((reason, index) => (
               <article
                 key={reason}
-                className={`flex min-h-[157px] flex-col items-center justify-center gap-[18px] rounded-[9px] border border-[#d7d7d7] px-[14px] py-[14px] ${
+                className={`group/card flex min-h-[157px] flex-col items-center justify-center gap-[18px] rounded-[9px] border border-[#d7d7d7] px-[14px] py-[14px] transition-all duration-300 ease-out cursor-pointer ${
                   index === 0
                     ? "bg-sage text-[#1c1b1f] shadow-[2px_2px_1px_rgba(58,61,45,0.5)]"
-                    : "bg-white text-olive"
+                    : "bg-white text-olive hover:bg-sage hover:text-[#1c1b1f] hover:shadow-[2px_2px_1px_rgba(58,61,45,0.5)] hover:-translate-y-1"
                 }`}
               >
                 <img src="/icons/inner-pets.svg" alt="" className="size-[34px] object-contain" />

@@ -47,8 +47,7 @@ export function ServicesHero() {
 
           <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-start justify-between gap-4 px-5 py-5 sm:flex-row sm:items-end sm:px-8 sm:py-8 lg:px-[89px] lg:py-10">
             <p className="max-w-[369px] text-[16px] leading-[22px] tracking-[-0.66px] text-black sm:text-[20px]">
-              Complete care. Specialised expertise. Veterinary services for routine healthcare,
-              unexpected illness and specialised treatment.
+              Expert veterinary care, specialised dental expertise and thoughtful support for every stage of your pet's life.
             </p>
             <PillButton
               href="#book"

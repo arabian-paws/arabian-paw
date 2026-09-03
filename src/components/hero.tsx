@@ -15,7 +15,7 @@ export function Hero() {
               </h1>
               <div className="mt-4 flex w-full flex-col items-start gap-4">
                 <p className="w-full text-[16px] leading-[20px] text-black sm:text-[20px] sm:leading-[23px]">
-                  Experience, precision, and a genuine understanding of the bond between pets and their families.
+                  Comprehensive veterinary care focused on your pet's health, comfort and well-being at every stage of life.
                 </p>
                 <PillButton
                   href="#emergency"
@@ -91,7 +91,7 @@ export function Hero() {
                 </h2>
                 <div className="mt-auto flex items-end justify-between gap-2 sm:h-[calc(100%-40px)] sm:gap-3">
                   <p className="max-w-[115px] text-[10px] font-light leading-3 text-black sm:text-sm sm:leading-4">
-                    Specialist oral healthcare
+                    Specialist dental & oral care
                   </p>
                   <span className="relative size-7 shrink-0 overflow-clip transition-transform duration-300 group-hover:translate-x-1 sm:size-9">
                     <img src="/icons/arrow-circle.svg" alt="" className="size-full object-contain" />
@@ -102,7 +102,10 @@ export function Hero() {
                 <h2 className="max-w-[141px] text-[13px] uppercase leading-4 text-black sm:text-[20px] sm:leading-5">
                   Wellness visits
                 </h2>
-                <div className="mt-auto flex justify-end">
+                <div className="mt-auto flex items-end justify-between gap-2 sm:h-[calc(100%-40px)] sm:gap-3">
+                  <p className="max-w-[115px] text-[10px] font-light leading-3 text-black sm:text-sm sm:leading-4">
+                    Preventive care for every life stage
+                  </p>
                   <span className="relative size-7 shrink-0 overflow-clip transition-transform duration-300 group-hover:translate-x-1 sm:size-9">
                     <img src="/icons/arrow-circle.svg" alt="" className="size-full object-contain" />
                   </span>

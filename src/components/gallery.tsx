@@ -31,8 +31,7 @@ export function Gallery() {
           Follow us
         </h2>
         <p className="mx-auto max-w-[480px] text-center text-sm font-medium leading-[20px] text-muted">
-          A spacious setting, contemporary facilities, and a clinic designed to make every part of
-          the veterinary experience more comfortable.
+          Take a closer look at Arabian Paws, our modern clinic, our team, and the care we provide every day.
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">

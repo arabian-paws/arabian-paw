@@ -32,6 +32,21 @@ const faqs = [
     answer:
       "You can book through our online booking system or contact the clinic directly.",
   },
+  {
+    question: "What should I expect at my pet's first visit?",
+    answer:
+      "Your first visit typically includes a full health assessment, a discussion of your pet's history and any current concerns, and a recommended plan for ongoing care. Bring any previous medical records if you have them.",
+  },
+  {
+    question: "What areas do you serve?",
+    answer:
+      "We're based in Majan and primarily serve Majan, Al Barari and the surrounding residential communities, including nearby Emirates cabin crew residences.",
+  },
+  {
+    question: "Do I need an appointment for emergency care?",
+    answer:
+      "No\u2026 for emergencies, contact the clinic directly and come in as soon as possible. Do not wait for an online booking confirmation.",
+  },
 ];
 
 export function Faq() {

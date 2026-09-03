@@ -74,8 +74,7 @@ export function Products() {
           Our featured products
         </h2>
         <p className="mx-auto mt-3 max-w-[540px] text-center text-sm font-medium leading-[20px] text-muted">
-          A considered selection of products and essentials for your pet, available conveniently at
-          Arabian Paws.
+          A carefully selected range of pet essentials, chosen to support their everyday health and wellbeing.
         </p>
 
         <div className="relative mx-auto mt-12 max-w-[932px]">

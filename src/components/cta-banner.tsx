@@ -14,8 +14,7 @@ export function CtaBanner() {
                 starts here
               </h2>
               <p className="mt-6 max-w-[480px] text-[22px] leading-[24px] text-olive">
-                Tell us a little about your pet and the reason for your visit. Our team will help
-                arrange the appropriate appointment.
+                Tell us about your pet and what they need. Our team will help you find the right appointment and care.
               </p>
               <PillButton href="/contact" variant="olive" className="mt-8 w-[200px] px-0">
                 Book an Appointment

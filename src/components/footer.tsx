@@ -4,25 +4,13 @@ import Image from "next/image";
 import { Logo } from "@/components/logo";
 import { PillButton } from "@/components/ui";
 
-const services = [
-  "Clinical Services",
-  "Emergency Care",
-  "VIP Home Care",
-  "Grooming & Spa",
-  "Wellness Packages",
-];
-
-const serviceLinks: Record<string, string> = {
-  "Clinical Services": "/services",
+const quickLinks: Record<string, string> = {
+  Home: "/",
+  "About Us": "/about",
+  Services: "/services",
   "Emergency Care": "/services/emergency",
-  "VIP Home Care": "/services/vip-home-care",
-  "Grooming & Spa": "/services/grooming",
-  "Wellness Packages": "/services/wellness",
-};
-
-const extraLinks: Record<string, string> = {
-  "Pet Boutique": "/services/boutique",
-  "Our Vets": "/about#vets",
+  "Dental Care": "/services/dental",
+  "Our Vets": "/our-vets",
   "Health Library": "/#news",
   Contact: "/contact",
 };
@@ -45,25 +33,28 @@ export function Footer() {
             <p className="mt-6 max-w-[319px] text-base font-light leading-[24px] text-cream">
               Exceptional Care. Healthier Smiles.
             </p>
+            <p className="mt-2 max-w-[319px] text-xs font-light leading-[20px] text-cream/70">
+              Veterinary Care | Dental Care | Emergency &amp; Critical Care | Wellness
+            </p>
           </div>
 
           <div>
-            <p className="font-display text-lg text-cream">Services</p>
+            <p className="font-display text-lg text-cream">Quick Links</p>
             <div className="mt-4 grid max-w-[340px] grid-cols-2 gap-x-8">
               <ul className="space-y-1 text-xs font-light leading-[22.5px]">
-                {services.map((item) => (
-                  <li key={item}>
-                    <a href={serviceLinks[item] ?? "/services"} className="hover:text-gold">
-                      {item}
+                {Object.entries(quickLinks).slice(0, 4).map(([label, href]) => (
+                  <li key={label}>
+                    <a href={href} className="hover:text-gold">
+                      {label}
                     </a>
                   </li>
                 ))}
               </ul>
               <ul className="space-y-1 text-xs font-light leading-[22.5px]">
-                {Object.keys(extraLinks).map((item) => (
-                  <li key={item}>
-                    <a href={extraLinks[item]} className="hover:text-gold">
-                      {item}
+                {Object.entries(quickLinks).slice(4).map(([label, href]) => (
+                  <li key={label}>
+                    <a href={href} className="hover:text-gold">
+                      {label}
                     </a>
                   </li>
                 ))}
@@ -113,6 +104,9 @@ export function Footer() {
           className="object-contain object-left-bottom mix-blend-screen"
           sizes="460px"
         />
+      </div>
+      <div className="relative z-10 pb-4 text-center text-xs font-light text-cream/60">
+        © Arabian Paws Veterinary Clinic. All Rights Reserved.
       </div>
     </footer>
   );

@@ -193,8 +193,7 @@ function items(): CatalogItem[] {
       gridClass: "xl:col-start-1 xl:row-start-2",
       node: (
         <p className="flex size-[314px] items-center px-1 text-[18px] leading-[22px] tracking-[-1px] text-black">
-          Located in Majan, Dubai, our clinic provides comprehensive veterinary care in a modern,
-          thoughtfully designed environment, with particular expertise in veterinary dentistry.
+          Located in Majan, Dubai, our modern clinic offers comprehensive veterinary care, with specialised expertise in veterinary dentistry.
         </p>
       ),
     },
@@ -332,7 +331,7 @@ export function ServicesCatalog({ showFilters = true }: { showFilters?: boolean 
             showFilters ? "lg:mb-[70px]" : ""
           }`}
         >
-          Services of our clinic
+          Our Veterinary Services
         </h2>
 
         {showFilters ? (

@@ -9,6 +9,7 @@ import { Products } from "@/components/products";
 import { Reveal } from "@/components/reveal";
 import { ServicesCatalog } from "@/components/services-catalog";
 import { Testimonials } from "@/components/testimonials";
+
 import { Vets } from "@/components/vets";
 
 export default function Home() {
