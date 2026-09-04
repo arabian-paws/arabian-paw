@@ -56,7 +56,7 @@ export function ServicesHero() {
               size="sm"
               className="shrink-0"
             >
-              Book Online
+              Book Appointment
             </PillButton>
           </div>
         </div>

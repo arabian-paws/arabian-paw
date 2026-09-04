@@ -24,8 +24,8 @@ export function Feedback() {
             Tell us a little about your pet and the reason for your visit. Our team will help
             arrange the appropriate appointment.
           </p>
-          <PillButton href="#news" variant="olive" className="mt-10 w-[166px] px-0">
-            See All
+          <PillButton href="#feedback" variant="olive" className="mt-10 w-[200px] px-0">
+            Give Feedback
           </PillButton>
         </div>
 

@@ -5,11 +5,9 @@ import { Feedback } from "@/components/feedback";
 import { Gallery } from "@/components/gallery";
 import { Hero } from "@/components/hero";
 import { News } from "@/components/news";
-import { Products } from "@/components/products";
 import { Reveal } from "@/components/reveal";
 import { ServicesCatalog } from "@/components/services-catalog";
 import { Testimonials } from "@/components/testimonials";
-
 import { Vets } from "@/components/vets";
 
 export default function Home() {
@@ -27,9 +25,6 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <Testimonials />
-      </Reveal>
-      <Reveal>
-        <Products />
       </Reveal>
       <Reveal>
         <Gallery />

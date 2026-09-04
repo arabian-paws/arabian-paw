@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/logo";
-import { PillButton } from "@/components/ui";
+import { PillButton, WHATSAPP_EMERGENCY } from "@/components/ui";
 import { SERVICES } from "@/data/services";
 
 const links: { href: string; label: string; match?: string; exact?: boolean }[] = [
@@ -12,7 +12,7 @@ const links: { href: string; label: string; match?: string; exact?: boolean }[] 
   { href: "/about", label: "About", match: "/about" },
   { href: "/our-vets", label: "Our Vets", match: "/our-vets" },
   { href: "/#products", label: "Pricing" },
-  { href: "/#news", label: "Blog" },
+  { href: "/health-library", label: "Blog", match: "/health-library" },
 ];
 
 export function Header() {
@@ -108,9 +108,9 @@ export function Header() {
 
         <div className="hidden items-center gap-1.5 lg:flex">
           <PillButton href="/contact" variant="sage" icon="/icons/medical.svg" size="sm">
-            Book Online
+            Book Appointment
           </PillButton>
-          <PillButton href="/#emergency" variant="emergency" icon="/icons/medical-white.svg" size="sm">
+          <PillButton href={WHATSAPP_EMERGENCY} variant="emergency" icon="/icons/medical-white.svg" size="sm">
             24/7 • Emergency Service
           </PillButton>
         </div>
@@ -207,9 +207,9 @@ export function Header() {
             );
           })}
           <PillButton href="/contact" variant="sage" icon="/icons/medical.svg" size="sm">
-            Book Online
+            Book Appointment
           </PillButton>
-          <PillButton href="/#emergency" variant="emergency" icon="/icons/medical-white.svg" size="sm">
+          <PillButton href={WHATSAPP_EMERGENCY} variant="emergency" icon="/icons/medical-white.svg" size="sm">
             24/7 • Emergency Service
           </PillButton>
         </div>

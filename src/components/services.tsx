@@ -6,7 +6,7 @@ function Badge({ className = "" }: { className?: string }) {
     <span
       className={`inline-flex h-[48px] items-center justify-center rounded-full border border-olive bg-cream px-8 text-[18px] leading-none text-black ${className}`}
     >
-      3 Services
+      View
     </span>
   );
 }
@@ -206,7 +206,7 @@ export function Services() {
               treatment.
             </p>
             <PillButton href="/services" variant="cream" className="absolute bottom-[18px] right-[18px]">
-              See All
+              All Services
             </PillButton>
           </article>
         </div>

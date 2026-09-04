@@ -81,10 +81,10 @@ export function AboutValues() {
             />
           </article>
           <ValueCard
-            title="Teamwork"
-            body="Great veterinary care is a team effort around every patient."
-            icon="/icons/value-teamwork.svg"
-            iconClass="h-[41px] w-[42px]"
+            title="Dedication"
+            body="We stay committed to every patient — from the first consultation through recovery and long-term care."
+            icon="/icons/value-dedication.svg"
+            iconClass="h-[42px] w-[42px]"
           />
           <ValueCard
             title="Respect"

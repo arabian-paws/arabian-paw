@@ -50,8 +50,8 @@ export function Testimonials() {
               Experience you can rely on. Care you can see. Our team brings years of practical
               experience across veterinary care, nursing and clinic administration.
             </p>
-            <PillButton href="#feedback" variant="olive" className="mt-8 w-[166px] px-0">
-              See All
+            <PillButton href="/#feedback" variant="olive" className="mt-8 w-[200px] px-0">
+              Give Feedback
             </PillButton>
           </div>
 
@@ -67,7 +67,7 @@ export function Testimonials() {
               <Card
                 quote="A purpose-designed clinic with contemporary equipment and clinical spaces."
                 name="Sahara Connor"
-                location="Al Barari, Dubai"
+                location="Jumeirah, Dubai"
                 avatar="/images/avatar-milly.png"
                 className="bg-cream"
               />
@@ -76,7 +76,7 @@ export function Testimonials() {
               <Card
                 quote="Specialised veterinary dental care supported by advanced technology."
                 name="Milla Collins"
-                location="Majan, Dubai"
+                location="Arabian Ranches, Dubai"
                 avatar="/images/avatar-andy.png"
                 className="bg-white"
               />

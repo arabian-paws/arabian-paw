@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Frame, PillButton } from "@/components/ui";
+import Link from "next/link";
+import { Frame, PillButton, WHATSAPP_EMERGENCY } from "@/components/ui";
 
 export function Hero() {
   return (
@@ -15,10 +16,10 @@ export function Hero() {
               </h1>
               <div className="mt-4 flex w-full flex-col items-start gap-4">
                 <p className="w-full text-[16px] leading-[20px] text-black sm:text-[20px] sm:leading-[23px]">
-                  Comprehensive veterinary care focused on your pet's health, comfort and well-being at every stage of life.
+                  Comprehensive veterinary care focused on your pet&apos;s health, comfort and well-being at every stage of life.
                 </p>
                 <PillButton
-                  href="#emergency"
+                  href={WHATSAPP_EMERGENCY}
                   variant="emergency"
                   icon="/icons/medical-hero.svg"
                   size="sm"
@@ -85,20 +86,26 @@ export function Hero() {
               priority
             />
             <div className="absolute bottom-3 left-3 right-3 grid grid-cols-2 gap-2 sm:bottom-[25px] sm:left-[29px] sm:right-[29px] sm:gap-[8px]">
-              <article className="group flex min-h-[140px] cursor-pointer flex-col rounded-xl bg-[rgba(255,247,233,0.5)] p-3 backdrop-blur-[11.4px] transition-all duration-300 hover:-translate-y-1 hover:bg-[rgba(255,247,233,0.72)] sm:h-[217px] sm:p-6">
+              <Link
+                href="/services/dentistry"
+                className="group flex min-h-[140px] cursor-pointer flex-col rounded-xl bg-[rgba(255,247,233,0.5)] p-3 backdrop-blur-[11.4px] transition-all duration-300 hover:-translate-y-1 hover:bg-[rgba(255,247,233,0.72)] sm:h-[217px] sm:p-6"
+              >
                 <h2 className="max-w-[141px] text-[13px] uppercase leading-4 text-black sm:text-[20px] sm:leading-5">
                   Dental Care
                 </h2>
                 <div className="mt-auto flex items-end justify-between gap-2 sm:h-[calc(100%-40px)] sm:gap-3">
                   <p className="max-w-[115px] text-[10px] font-light leading-3 text-black sm:text-sm sm:leading-4">
-                    Specialist dental & oral care
+                    Specialist dental &amp; oral care
                   </p>
                   <span className="relative size-7 shrink-0 overflow-clip transition-transform duration-300 group-hover:translate-x-1 sm:size-9">
                     <img src="/icons/arrow-circle.svg" alt="" className="size-full object-contain" />
                   </span>
                 </div>
-              </article>
-              <article className="group flex min-h-[140px] cursor-pointer flex-col rounded-xl bg-[rgba(255,247,233,0.5)] p-3 backdrop-blur-[11.4px] transition-all duration-300 hover:-translate-y-1 hover:bg-[rgba(255,247,233,0.72)] sm:h-[217px] sm:p-6">
+              </Link>
+              <Link
+                href="/services/wellness"
+                className="group flex min-h-[140px] cursor-pointer flex-col rounded-xl bg-[rgba(255,247,233,0.5)] p-3 backdrop-blur-[11.4px] transition-all duration-300 hover:-translate-y-1 hover:bg-[rgba(255,247,233,0.72)] sm:h-[217px] sm:p-6"
+              >
                 <h2 className="max-w-[141px] text-[13px] uppercase leading-4 text-black sm:text-[20px] sm:leading-5">
                   Wellness visits
                 </h2>
@@ -110,7 +117,7 @@ export function Hero() {
                     <img src="/icons/arrow-circle.svg" alt="" className="size-full object-contain" />
                   </span>
                 </div>
-              </article>
+              </Link>
             </div>
           </div>
         </div>

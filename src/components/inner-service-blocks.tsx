@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { Frame, PillButton } from "@/components/ui";
+import { Frame, PillButton, WHATSAPP_EMERGENCY } from "@/components/ui";
 import type { ServiceBlock } from "@/data/services";
 
 function Actions() {
   return (
     <div className="flex flex-col items-start gap-3 sm:flex-row sm:gap-[22px]">
       <PillButton
-        href="/#emergency"
+        href={WHATSAPP_EMERGENCY}
         variant="emergency"
         icon="/icons/medical-white.svg"
         size="sm"
@@ -14,7 +14,7 @@ function Actions() {
         24/7 • Emergency Service
       </PillButton>
       <PillButton href="/contact" variant="olive" icon="/icons/medical-cream.svg" size="sm">
-        Book Online
+        Book Appointment
       </PillButton>
     </div>
   );

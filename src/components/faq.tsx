@@ -28,11 +28,6 @@ const faqs = [
     answer: "Yes. Complimentary customer parking is available at the clinic.",
   },
   {
-    question: "How can I book an appointment?",
-    answer:
-      "You can book through our online booking system or contact the clinic directly.",
-  },
-  {
     question: "What should I expect at my pet's first visit?",
     answer:
       "Your first visit typically includes a full health assessment, a discussion of your pet's history and any current concerns, and a recommended plan for ongoing care. Bring any previous medical records if you have them.",

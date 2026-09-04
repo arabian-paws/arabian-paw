@@ -2,11 +2,26 @@ import Image from "next/image";
 import { Frame } from "@/components/ui";
 
 const socials = [
-  { src: "/icons/social-instagram.svg", label: "Instagram" },
-  { src: "/icons/social-youtube.svg", label: "YouTube" },
-  { src: "/icons/social-facebook.svg", label: "Facebook" },
-  { src: "/icons/social-tiktok.svg", label: "TikTok" },
-  { src: "/icons/social-x.svg", label: "X" },
+  {
+    src: "/icons/social-instagram.svg",
+    label: "Instagram",
+    href: "https://www.instagram.com/arabianpaws.ae/",
+  },
+  {
+    src: "/icons/social-linkedin.svg",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/arabianpaws.ae/posts/?feedView=all",
+  },
+  {
+    src: "/icons/social-facebook.svg",
+    label: "Facebook",
+    href: "https://www.facebook.com/arabianpaws.ae",
+  },
+  {
+    src: "/icons/social-youtube.svg",
+    label: "YouTube",
+    href: "https://www.youtube.com/@arabianpaws-ae",
+  },
 ];
 
 function Photo({ src, alt, className }: { src: string; alt: string; className: string }) {
@@ -50,7 +65,9 @@ export function Gallery() {
           {socials.map((social) => (
             <a
               key={social.label}
-              href="#gallery"
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={social.label}
               className="flex size-[39px] items-center justify-center overflow-hidden rounded-full bg-cream transition-transform duration-300 hover:scale-110"
             >

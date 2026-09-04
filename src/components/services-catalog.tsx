@@ -22,7 +22,7 @@ function Badge({ className = "" }: { className?: string }) {
     <span
       className={`inline-flex h-[48px] items-center justify-center rounded-full border border-olive bg-cream px-8 text-[18px] leading-none text-black ${className}`}
     >
-      3 Services
+      View
     </span>
   );
 }
@@ -261,7 +261,7 @@ function items(): CatalogItem[] {
       node: (
         <TextCard title="Book our consultation" className="">
           <PillButton href="/contact" variant="ghost" className="h-[48px] px-8 text-[18px]">
-            Book Online
+            Book Appointment
           </PillButton>
         </TextCard>
       ),
@@ -383,6 +383,12 @@ export function ServicesCatalog({ showFilters = true }: { showFilters?: boolean 
               No services match your search.
             </p>
           )}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <PillButton href="/services" variant="olive" className="w-[200px] px-0">
+            All Services
+          </PillButton>
         </div>
       </Frame>
     </section>

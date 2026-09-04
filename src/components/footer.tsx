@@ -2,16 +2,16 @@
 
 import Image from "next/image";
 import { Logo } from "@/components/logo";
-import { PillButton } from "@/components/ui";
+import { PillButton, WHATSAPP_EMERGENCY } from "@/components/ui";
 
 const quickLinks: Record<string, string> = {
   Home: "/",
   "About Us": "/about",
   Services: "/services",
   "Emergency Care": "/services/emergency",
-  "Dental Care": "/services/dental",
+  "Dental Care": "/services/dentistry",
   "Our Vets": "/our-vets",
-  "Health Library": "/#news",
+  "Health Library": "/health-library",
   Contact: "/contact",
 };
 
@@ -80,10 +80,10 @@ export function Footer() {
               </h2>
               <div className="mt-6 flex flex-wrap gap-2 lg:justify-end">
                 <PillButton href="/contact" variant="olive" icon="/icons/medical-footer.svg" size="sm">
-                  Book Online
+                  Book Appointment
                 </PillButton>
                 <PillButton
-                  href="/#emergency"
+                  href={WHATSAPP_EMERGENCY}
                   variant="cream"
                   icon="/icons/medical-footer-dark.svg"
                   size="sm"
