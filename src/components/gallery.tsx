@@ -54,7 +54,7 @@ export function Gallery() {
             <Photo src="/images/gallery-1.png" alt="Cat at the clinic" className="h-[398px]" />
             <Photo src="/images/gallery-3.png" alt="Family with a dog" className="h-[398px]" />
           </div>
-          <Photo src="/images/hero-vet.png" alt="Veterinarian with a pet" className="h-[398px] md:h-[820px]" />
+          <Photo src="/images/gallery-mid.jpg" alt="Veterinarian examining a dog" className="h-[398px] md:h-[820px]" />
           <div className="flex flex-col gap-6">
             <Photo src="/images/gallery-2.png" alt="Woman with a dog" className="h-[398px]" />
             <Photo src="/images/gallery-4.png" alt="Rabbit at the clinic" className="h-[398px]" />
