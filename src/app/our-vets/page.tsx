@@ -12,7 +12,7 @@ export default function OurVetsPage() {
   return (
     <main className="pt-[140px] pb-10">
       <Reveal>
-        <Vets />
+        <Vets showCta={false} />
       </Reveal>
       <Reveal>
         <PetWellness />
