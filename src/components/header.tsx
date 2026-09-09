@@ -11,8 +11,7 @@ const links: { href: string; label: string; match?: string; exact?: boolean }[] 
   { href: "/", label: "Home", match: "/" },
   { href: "/about", label: "About", match: "/about" },
   { href: "/our-vets", label: "Our Vets", match: "/our-vets" },
-  { href: "/#products", label: "Pricing" },
-  { href: "/health-library", label: "Blog", match: "/health-library" },
+  { href: "/blogs", label: "Blog", match: "/blogs" },
 ];
 
 export function Header() {

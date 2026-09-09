@@ -11,7 +11,7 @@ const quickLinks: Record<string, string> = {
   "Emergency Care": "/services/emergency",
   "Dental Care": "/services/dentistry",
   "Our Vets": "/our-vets",
-  "Health Library": "/health-library",
+  "Health Library": "/blogs",
   Contact: "/contact",
 };
 

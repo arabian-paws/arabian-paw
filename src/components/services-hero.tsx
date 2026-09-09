@@ -33,7 +33,7 @@ export function ServicesHero() {
 
           <article className="absolute left-4 top-[88px] z-10 flex h-[160px] w-[220px] cursor-pointer flex-col rounded-[12px] bg-[rgba(255,247,233,0.5)] p-4 backdrop-blur-[11.4px] transition-all duration-300 hover:-translate-y-1 hover:bg-[rgba(255,247,233,0.72)] sm:left-6 sm:h-[180px] sm:w-[240px] sm:p-5 lg:left-[81px] lg:top-[111px] lg:h-[217px] lg:w-[284px] lg:p-6">
             <h2 className="max-w-[141px] text-[16px] uppercase leading-4 text-black sm:text-[18px] sm:leading-5 lg:text-[20px]">
-              Clinical veterinary care
+              Professional Veterinary Care
             </h2>
             <div className="mt-auto flex items-end justify-between gap-2">
               <p className="max-w-[115px] text-[12px] font-light leading-4 text-black sm:text-sm">
@@ -45,9 +45,9 @@ export function ServicesHero() {
             </div>
           </article>
 
-          <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-start justify-between gap-4 px-5 py-5 sm:flex-row sm:items-end sm:px-8 sm:py-8 lg:px-[89px] lg:py-10">
-            <p className="max-w-[369px] text-[16px] leading-[22px] tracking-[-0.66px] text-black sm:text-[20px]">
-              Expert veterinary care, specialised dental expertise and thoughtful support for every stage of your pet's life.
+          <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-start justify-between gap-4 bg-gradient-to-t from-black/55 via-black/25 to-transparent px-5 pb-5 pt-16 sm:flex-row sm:items-end sm:px-8 sm:pb-8 sm:pt-20 lg:bg-none lg:from-transparent lg:via-transparent lg:to-transparent lg:px-[89px] lg:py-10 lg:pt-10">
+            <p className="max-w-[369px] rounded-[10px] bg-[rgba(255,247,233,0.88)] px-3 py-2 text-[16px] leading-[22px] tracking-[-0.66px] text-olive backdrop-blur-sm sm:text-[20px] lg:bg-transparent lg:px-0 lg:py-0 lg:text-black lg:backdrop-blur-none">
+              Expert veterinary care, specialised dental expertise and thoughtful support for every stage of your pet&apos;s life.
             </p>
             <PillButton
               href="#book"
