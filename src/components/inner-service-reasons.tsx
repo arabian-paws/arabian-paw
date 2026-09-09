@@ -21,14 +21,10 @@ export function InnerServiceReasons({
           </p>
 
           <div className="grid w-full grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-[19px] lg:gap-y-[18px]">
-            {reasons.map((reason, index) => (
+            {reasons.map((reason) => (
               <article
                 key={reason}
-                className={`group/card flex min-h-[157px] flex-col items-center justify-center gap-[18px] rounded-[9px] border border-[#d7d7d7] px-[14px] py-[14px] transition-all duration-300 ease-out cursor-pointer ${
-                  index === 0
-                    ? "bg-sage text-[#1c1b1f] shadow-[2px_2px_1px_rgba(58,61,45,0.5)]"
-                    : "bg-white text-olive hover:bg-sage hover:text-[#1c1b1f] hover:shadow-[2px_2px_1px_rgba(58,61,45,0.5)] hover:-translate-y-1"
-                }`}
+                className="group/card flex min-h-[157px] cursor-pointer flex-col items-center justify-center gap-[18px] rounded-[9px] border border-[#d7d7d7] bg-white px-[14px] py-[14px] text-olive transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-sage hover:text-[#1c1b1f] hover:shadow-[2px_2px_1px_rgba(58,61,45,0.5)]"
               >
                 <img src="/icons/inner-pets.svg" alt="" className="size-[34px] object-contain" />
                 <p className="max-w-[233px] text-center text-[16.5px] leading-[1.34] tracking-[-0.83px]">

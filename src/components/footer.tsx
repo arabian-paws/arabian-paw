@@ -65,8 +65,23 @@ export function Footer() {
           <div>
             <p className="font-display text-lg text-cream">Contact</p>
             <p className="mt-4 text-xs font-light leading-[22.5px]">Majan, Dubai, UAE</p>
-            <p className="text-xs font-medium leading-[22.5px]">contact@arabianpaw.ae</p>
-            <p className="text-xs font-light leading-[22.5px]">24/7 Emergency Service</p>
+            <p className="text-xs font-medium leading-[22.5px]">
+              <a href="mailto:Info@arabianpaws.ae" className="hover:text-gold">
+                Info@arabianpaws.ae
+              </a>
+            </p>
+            <p className="text-xs font-light leading-[22.5px]">
+              Landline:{" "}
+              <a href="tel:+97142599244" className="hover:text-gold">
+                04 259 9244
+              </a>
+            </p>
+            <p className="text-xs font-light leading-[22.5px]">
+              24/7 Emergency:{" "}
+              <a href="https://wa.me/971565110765" className="hover:text-gold" target="_blank" rel="noopener noreferrer">
+                +971 56 511 0765
+              </a>
+            </p>
           </div>
         </div>
 

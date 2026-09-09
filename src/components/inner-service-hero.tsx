@@ -84,17 +84,17 @@ export function InnerServiceHero({ service }: { service: ServicePageData }) {
             />
           </div>
 
-          <div className="relative z-10 mx-5 mb-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-5 rounded-[7px] bg-[rgba(255,247,233,0.5)] px-4 py-5 backdrop-blur-[7px] sm:mx-8 lg:absolute lg:left-[57px] lg:top-[543px] lg:mx-0 lg:mb-0 lg:h-[117px] lg:w-[814px] lg:gap-[33px] lg:px-0 lg:py-0">
+          <div className="relative z-10 mx-5 mb-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-5 rounded-[7px] bg-[rgba(255,247,233,0.5)] px-4 py-5 backdrop-blur-[7px] sm:mx-8 lg:absolute lg:left-[40px] lg:top-[543px] lg:mx-0 lg:mb-0 lg:h-[117px] lg:w-[900px] lg:flex-nowrap lg:justify-between lg:gap-3 lg:px-5 lg:py-0">
             {service.stats.map((stat) => (
-              <div key={stat.title} className="flex items-center gap-[13px]">
+              <div key={stat.title} className="flex shrink-0 items-center gap-[10px]">
                 {stat.icon === "team" ? (
                   <ExpertTeamIcon />
                 ) : (
                   <img src={stat.icon} alt="" className={`${stat.iconClass} shrink-0 object-contain`} />
                 )}
                 <span className="h-14 w-px shrink-0 bg-olive" />
-                <div className="text-olive">
-                  <p className="font-display text-[14px] leading-normal">{stat.title}</p>
+                <div className="whitespace-nowrap text-olive">
+                  <p className="font-display text-[13px] leading-normal lg:text-[14px]">{stat.title}</p>
                   <p className="text-[11px] font-light leading-normal">{stat.subtitle}</p>
                 </div>
               </div>

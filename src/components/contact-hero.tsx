@@ -58,20 +58,31 @@ export function ContactHero() {
               <span className="text-[22px] tracking-[-1.4px] sm:text-[28px]">Majan, Dubai</span>
             </a>
             <a
-              href="mailto:contact@arabianpaw.ae"
+              href="mailto:Info@arabianpaws.ae"
               className="flex h-[96px] items-center gap-8 rounded-[12px] bg-cream px-6 text-olive sm:px-[42px]"
             >
               <img src="/icons/contact-mail.svg" alt="" className="size-[52px] object-contain" />
               <span className="text-[18px] tracking-[-1.4px] sm:text-[28px]">
-                contact@arabianpaw.ae
+                Info@arabianpaws.ae
               </span>
             </a>
             <a
-              href="tel:+2358349130"
+              href="tel:+97142599244"
               className="flex h-[96px] items-center gap-8 rounded-[12px] bg-sage px-6 text-olive sm:px-[42px]"
             >
               <img src="/icons/contact-call.svg" alt="" className="size-[52px] object-contain" />
-              <span className="text-[22px] tracking-[-1.4px] sm:text-[28px]">(235) 834 - 9130</span>
+              <span className="text-[22px] tracking-[-1.4px] sm:text-[28px]">04 259 9244</span>
+            </a>
+            <a
+              href="https://wa.me/971565110765"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-[96px] items-center gap-8 rounded-[12px] bg-emergency px-6 text-white sm:px-[42px]"
+            >
+              <img src="/icons/medical-white.svg" alt="" className="size-[40px] object-contain" />
+              <span className="text-[18px] tracking-[-1.0px] sm:text-[24px]">
+                24/7 Emergency · +971 56 511 0765
+              </span>
             </a>
           </div>
 

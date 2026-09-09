@@ -19,7 +19,7 @@ export default function ServicesPage() {
     <main id="home">
       <ServicesHero />
       <Reveal>
-        <ServicesCatalog />
+        <ServicesCatalog showAllServicesLink={false} />
       </Reveal>
       <Reveal>
         <Vets />

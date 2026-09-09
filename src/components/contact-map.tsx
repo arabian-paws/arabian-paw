@@ -9,8 +9,8 @@ export function ContactMap() {
             Come and visit us with your pet
           </h2>
           <p className="mx-auto mt-6 max-w-[688px] text-center text-[18px] leading-[24px] text-olive sm:text-[22.5px]">
-            Arabian Paws Veterinary Clinic, Majan, Dubai. Open 24/7 for emergency service.
-            Email us at contact@arabianpaw.ae.
+            Arabian Paws Veterinary Clinic, Majan, Dubai. Landline 04 259 9244. Open 24/7 for
+            emergency service on +971 56 511 0765. Email us at Info@arabianpaws.ae.
           </p>
           <div className="relative mx-auto mt-16 h-[280px] w-full max-w-[1258px] overflow-hidden rounded-[12px] border border-[#d7d7d7] shadow-[4px_4px_4px_rgba(0,0,0,0.25)] sm:h-[400px] lg:h-[548px]">
             <img

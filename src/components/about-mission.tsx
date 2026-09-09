@@ -89,8 +89,8 @@ export function AboutMission() {
             <div className="relative h-[260px] w-full overflow-hidden rounded-[12px] bg-gold sm:h-[340px] lg:h-[360px] lg:w-[min(100%,560px)] lg:shrink-0 xl:h-[400px] 2xl:h-[420px] 2xl:w-[min(100%,640px)]">
               <img
                 src="/images/about-story.png"
-                alt="Veterinarian holding a white puppy"
-                className="size-full origin-[48%_38%] scale-[1.2] object-cover object-[48%_38%] transition-transform duration-700 ease-out hover:scale-[1.28]"
+                alt="Woman smiling with a white puppy"
+                className="size-full object-cover object-center transition-transform duration-700 ease-out hover:scale-[1.05]"
               />
             </div>
           </div>

@@ -305,7 +305,13 @@ function items(): CatalogItem[] {
   ];
 }
 
-export function ServicesCatalog({ showFilters = true }: { showFilters?: boolean }) {
+export function ServicesCatalog({
+  showFilters = true,
+  showAllServicesLink = true,
+}: {
+  showFilters?: boolean;
+  showAllServicesLink?: boolean;
+}) {
   const [department, setDepartment] = useState("");
   const [query, setQuery] = useState("");
   const catalog = useMemo(() => items(), []);
@@ -385,11 +391,13 @@ export function ServicesCatalog({ showFilters = true }: { showFilters?: boolean 
           )}
         </div>
 
-        <div className="mt-10 flex justify-center">
-          <PillButton href="/services" variant="olive" className="w-[200px] px-0">
-            All Services
-          </PillButton>
-        </div>
+        {showAllServicesLink ? (
+          <div className="mt-10 flex justify-center">
+            <PillButton href="/services" variant="olive" className="w-[200px] px-0">
+              All Services
+            </PillButton>
+          </div>
+        ) : null}
       </Frame>
     </section>
   );
