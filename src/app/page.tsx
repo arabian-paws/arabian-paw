@@ -6,7 +6,7 @@ import { Gallery } from "@/components/gallery";
 import { Hero } from "@/components/hero";
 import { News } from "@/components/news";
 import { Reveal } from "@/components/reveal";
-import { ServicesCatalog } from "@/components/services-catalog";
+import { Services } from "@/components/services";
 import { Testimonials } from "@/components/testimonials";
 import { Vets } from "@/components/vets";
 
@@ -18,7 +18,7 @@ export default function Home() {
         <About />
       </Reveal>
       <Reveal>
-        <ServicesCatalog showFilters={false} />
+        <Services />
       </Reveal>
       <Reveal>
         <Vets />

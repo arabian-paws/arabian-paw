@@ -19,11 +19,6 @@ const faqs = [
       "Yes. Veterinary dentistry is one of our key areas of expertise, with specialised dental services supported by advanced technology.",
   },
   {
-    question: "Do you offer home veterinary care?",
-    answer:
-      "Yes. Arabian Paws offers VIP home care for families looking for veterinary support at home.",
-  },
-  {
     question: "Is parking available?",
     answer: "Yes. Complimentary customer parking is available at the clinic.",
   },

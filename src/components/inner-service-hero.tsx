@@ -1,4 +1,4 @@
-import { Frame, PillButton, WHATSAPP_EMERGENCY } from "@/components/ui";
+import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY, PHONE_LANDLINE, PHONE_DISPLAY } from "@/components/ui";
 import type { ServicePageData } from "@/data/services";
 
 function ExpertTeamIcon() {
@@ -63,14 +63,21 @@ export function InnerServiceHero({ service }: { service: ServicePageData }) {
             </p>
             <div className="flex flex-col items-start gap-3 sm:flex-row sm:gap-[18px]">
               <PillButton
-                href={WHATSAPP_EMERGENCY}
+                href={PHONE_LANDLINE}
                 variant="emergency"
                 icon="/icons/medical-white.svg"
                 size="sm"
+                subtitle={PHONE_DISPLAY}
               >
-                Open 24/7 • Emergency Service
+                Open 24/7 Emergency
               </PillButton>
-              <PillButton href="/contact" variant="olive" icon="/icons/medical-cream.svg" size="sm">
+              <PillButton
+                href={WHATSAPP_EMERGENCY}
+                variant="olive"
+                icon="/icons/medical-cream.svg"
+                size="sm"
+                subtitle={WHATSAPP_DISPLAY}
+              >
                 Book Appointment
               </PillButton>
             </div>

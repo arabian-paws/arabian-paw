@@ -3,7 +3,7 @@ import { Faq } from "@/components/faq";
 import { Feedback } from "@/components/feedback";
 import { News } from "@/components/news";
 import { Reveal } from "@/components/reveal";
-import { ServicesCatalog } from "@/components/services-catalog";
+import { Services } from "@/components/services";
 import { ServicesHero } from "@/components/services-hero";
 import { Testimonials } from "@/components/testimonials";
 import { Vets } from "@/components/vets";
@@ -19,7 +19,7 @@ export default function ServicesPage() {
     <main id="home">
       <ServicesHero />
       <Reveal>
-        <ServicesCatalog showAllServicesLink={false} />
+        <Services showVisitAll={false} className="pb-8 pt-4 lg:pt-[82px]" />
       </Reveal>
       <Reveal>
         <Vets />

@@ -24,15 +24,16 @@ const socials = [
   },
 ];
 
-function Photo({ src, alt, className }: { src: string; alt: string; className: string }) {
+function Photo({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className={`group relative overflow-hidden rounded-2xl ${className}`}>
+    <div className="group relative w-full overflow-hidden rounded-2xl bg-cream-soft">
       <Image
         src={src}
         alt={alt}
-        fill
-        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-        sizes="420px"
+        width={840}
+        height={1200}
+        className="h-auto w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+        sizes="(max-width: 768px) 100vw, 33vw"
       />
     </div>
   );
@@ -49,15 +50,26 @@ export function Gallery() {
           Take a closer look at Arabian Paws, our modern clinic, our team, and the care we provide every day.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 items-start gap-6 md:grid-cols-3">
           <div className="flex flex-col gap-6">
-            <Photo src="/images/gallery-1.png" alt="Cat at the clinic" className="h-[398px]" />
-            <Photo src="/images/gallery-3.png" alt="Family with a dog" className="h-[398px]" />
+            <Photo src="/images/gallery-1.jpg" alt="Arabian Paws from nose to tail care" />
+            <Photo src="/images/gallery-4.jpg" alt="Arabian Paws doors are open" />
           </div>
-          <Photo src="/images/smiling-vet.webp" alt="Smiling veterinarian with a beagle" className="h-[398px] md:h-[820px]" />
+
+          <div className="relative min-h-[420px] overflow-hidden rounded-2xl bg-olive md:min-h-[640px] lg:min-h-[820px]">
+            <video
+              className="absolute inset-0 size-full object-contain"
+              src="/videos/follow-us-center.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              aria-label="Arabian Paws clinic video"
+            />
+          </div>
+
           <div className="flex flex-col gap-6">
-            <Photo src="/images/gallery-2.png" alt="Woman with a dog" className="h-[398px]" />
-            <Photo src="/images/gallery-4.png" alt="Rabbit at the clinic" className="h-[398px]" />
+            <Photo src="/images/gallery-2.jpg" alt="Some pets just don't do vets" />
+            <Photo src="/images/gallery-3.jpg" alt="Better care starts at home" />
           </div>
         </div>
 

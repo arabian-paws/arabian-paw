@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Frame, PillButton, WHATSAPP_EMERGENCY } from "@/components/ui";
+import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY, PHONE_LANDLINE, PHONE_DISPLAY } from "@/components/ui";
 import { BLOGS, getBlog } from "@/data/blogs";
 
 export function generateStaticParams() {
@@ -106,16 +106,23 @@ export default async function BlogPostPage({
           </div>
 
           <div className="mt-12 flex flex-col gap-3 border-t border-[#e5e5e5] pt-10 sm:flex-row sm:items-center">
-            <PillButton href="/contact" variant="olive" icon="/icons/medical-cream.svg" size="sm">
+            <PillButton
+              href={WHATSAPP_EMERGENCY}
+              variant="olive"
+              icon="/icons/medical-cream.svg"
+              size="sm"
+              subtitle={WHATSAPP_DISPLAY}
+            >
               Book Appointment
             </PillButton>
             <PillButton
-              href={WHATSAPP_EMERGENCY}
+              href={PHONE_LANDLINE}
               variant="emergency"
               icon="/icons/medical-white.svg"
               size="sm"
+              subtitle={PHONE_DISPLAY}
             >
-              24/7 • Emergency Service
+              24/7 Emergency
             </PillButton>
           </div>
         </div>

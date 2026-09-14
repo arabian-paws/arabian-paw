@@ -35,71 +35,63 @@ function PhotoCard({
   title,
   titleClass = "text-olive",
   bg,
-  className,
+  gridClass = "",
   href,
+  wide = false,
   children,
 }: {
   title: string;
   titleClass?: string;
   bg: string;
-  className: string;
-  href?: string;
+  gridClass?: string;
+  href: string;
+  wide?: boolean;
   children: React.ReactNode;
 }) {
-  const card = (
-    <article
-      className={`group relative size-[314px] overflow-hidden rounded-xl transition-transform duration-500 hover:-translate-y-1 ${bg} ${className}`}
-    >
-      {children}
-      <h3
-        className={`absolute left-[26px] top-[26px] z-10 w-[180px] font-display text-[23px] uppercase leading-[22px] ${titleClass}`}
-      >
-        {title}
-      </h3>
-      <Badge className="absolute bottom-[18px] right-[18px] z-20" />
-    </article>
-  );
-
-  if (href) {
-    return (
-      <Link href={href} className="block">
-        {card}
-      </Link>
-    );
-  }
-
-  return card;
-}
-
-function VipCard({ className, href = "/services/vip-home-care" }: { className: string; href?: string }) {
   return (
-    <Link href={href} className="block">
+    <Link
+      href={href}
+      className={`block ${wide ? "h-[314px] w-full max-w-[636px] sm:col-span-2" : "size-[314px]"} ${gridClass}`}
+    >
       <article
-        className={`group flex size-[314px] flex-col items-center justify-center gap-7 rounded-xl transition-transform duration-500 hover:-translate-y-1 ${className}`}
+        className={`group relative size-full overflow-hidden rounded-xl transition-transform duration-500 hover:-translate-y-1 ${bg}`}
       >
-        <h3 className="text-center font-display text-[23px] uppercase leading-[22px] text-olive">
-          VIP Home Care
+        {children}
+        <h3
+          className={`absolute left-[26px] top-[26px] z-10 w-[200px] font-display text-[23px] uppercase leading-[22px] ${titleClass}`}
+        >
+          {title}
         </h3>
-        <Badge />
+        <Badge className="absolute bottom-[18px] right-[18px] z-20" />
       </article>
     </Link>
   );
 }
 
-export function Services() {
+export function Services({
+  showVisitAll = true,
+  showHeading = true,
+  className = "pb-8 pt-4",
+}: {
+  showVisitAll?: boolean;
+  showHeading?: boolean;
+  className?: string;
+}) {
   return (
-    <section id="services" className="pb-8 pt-4">
+    <section id="services" className={className}>
       <Frame>
-        <h2 className="mb-10 text-center font-display text-[36px] uppercase leading-[34px] text-olive">
-          Services of our clinic
-        </h2>
+        {showHeading ? (
+          <h2 className="mb-8 text-center font-display text-[32px] uppercase leading-[34px] text-olive sm:mb-10 sm:text-[36px]">
+            Services of our clinic
+          </h2>
+        ) : null}
 
-        <div className="mx-auto grid w-fit max-w-full grid-cols-1 justify-center justify-items-center gap-2 sm:grid-cols-2 xl:grid-cols-[repeat(4,314px)] xl:grid-rows-[repeat(4,314px)]">
+        <div className="mx-auto grid w-fit max-w-full grid-cols-1 justify-center justify-items-center gap-2 sm:grid-cols-2 xl:grid-cols-[repeat(4,314px)] xl:grid-rows-[repeat(3,314px)]">
           <PhotoCard
             title="Emergency & ICU"
             bg="bg-gold"
             href="/services/emergency"
-            className="xl:col-start-1 xl:row-start-1"
+            gridClass="xl:col-start-1 xl:row-start-1"
           >
             <Animal
               src="/images/kitten.png"
@@ -108,9 +100,25 @@ export function Services() {
             />
           </PhotoCard>
 
-          <VipCard className="xl:col-start-2 xl:row-start-1" />
+          <PhotoCard
+            title="VIP Home Care"
+            bg="bg-sage"
+            href="/services/vip-home-care"
+            gridClass="xl:col-start-2 xl:row-start-1"
+          >
+            <Animal
+              src="/images/vip-cockatoo.png"
+              wrapClass="left-[40px] top-[12px] h-[302px] w-[274px]"
+              imgClass="left-0 top-0 h-[136.42%] w-[100.22%]"
+            />
+          </PhotoCard>
 
-          <PhotoCard title="Diagnostics & Lab" bg="bg-cream" href="/services/diagnostics" className="xl:col-start-3 xl:row-start-1">
+          <PhotoCard
+            title="Diagnostics & Lab"
+            bg="bg-cream"
+            href="/services/diagnostics"
+            gridClass="xl:col-start-3 xl:row-start-1"
+          >
             <Animal
               src="/images/basenji.png"
               wrapClass="left-0 top-[68px] h-[246px] w-[314px]"
@@ -118,7 +126,12 @@ export function Services() {
             />
           </PhotoCard>
 
-          <PhotoCard title="Surgery" bg="bg-sage" href="/services/surgery" className="xl:col-start-4 xl:row-start-1">
+          <PhotoCard
+            title="Surgery"
+            bg="bg-sage"
+            href="/services/surgery"
+            gridClass="xl:col-start-4 xl:row-start-1"
+          >
             <Animal
               src="/images/hero-cat.png"
               wrapClass="inset-0"
@@ -126,17 +139,25 @@ export function Services() {
             />
           </PhotoCard>
 
-          <p className="flex size-[314px] items-center px-1 text-[18px] leading-[22px] tracking-[-1px] text-black xl:col-start-1 xl:row-start-2">
-            Located in Majan, Dubai, our clinic provides comprehensive veterinary care in a modern,
-            thoughtfully designed environment, with particular expertise in veterinary dentistry.
-          </p>
+          <PhotoCard
+            title="Grooming & Spa"
+            bg="bg-gold"
+            href="/services/grooming"
+            gridClass="xl:col-start-1 xl:row-start-2"
+          >
+            <Animal
+              src="/images/brown-dog.png"
+              wrapClass="left-0 top-[11px] h-[303px] w-[314px]"
+              imgClass="left-[-26.75%] top-0 h-[196.11%] w-[157.96%]"
+            />
+          </PhotoCard>
 
           <PhotoCard
             title="Dentistry"
             titleClass="text-white"
             bg="bg-olive-muted"
             href="/services/dentistry"
-            className="xl:col-start-2 xl:row-start-2"
+            gridClass="xl:col-start-2 xl:row-start-2"
           >
             <Animal
               src="/images/rabbit.png"
@@ -145,9 +166,25 @@ export function Services() {
             />
           </PhotoCard>
 
-          <VipCard className="xl:col-start-3 xl:row-start-2" />
+          <PhotoCard
+            title="Travel & Relocation"
+            bg="bg-sage"
+            href="/services/travel"
+            gridClass="xl:col-start-3 xl:row-start-2"
+          >
+            <Animal
+              src="/images/travel-terrier.png"
+              wrapClass="left-[-12px] top-[68px] h-[246px] w-[259px]"
+              imgClass="left-0 top-0 h-[105.28%] w-full"
+            />
+          </PhotoCard>
 
-          <PhotoCard title="Wellness & Vaccines" bg="bg-gold" href="/services/wellness" className="xl:col-start-4 xl:row-start-2">
+          <PhotoCard
+            title="Wellness & Vaccines"
+            bg="bg-gold"
+            href="/services/wellness"
+            gridClass="xl:col-start-4 xl:row-start-2"
+          >
             <Animal
               src="/images/cockatoo.png"
               wrapClass="left-0 top-[69px] h-[245px] w-[271px]"
@@ -155,60 +192,84 @@ export function Services() {
             />
           </PhotoCard>
 
-          <PhotoCard title="Grooming & Spa" bg="bg-gold" href="/services/grooming" className="xl:col-start-1 xl:row-start-3">
-            <Animal
-              src="/images/brown-dog.png"
-              wrapClass="left-0 top-[11px] h-[303px] w-[314px]"
-              imgClass="left-[-26.75%] top-0 h-[196.11%] w-[157.96%]"
-            />
-          </PhotoCard>
+          {showVisitAll ? (
+            <>
+              <article className="relative h-[314px] w-[314px] overflow-hidden rounded-xl bg-olive p-6 transition-transform duration-500 hover:-translate-y-1 sm:col-span-2 sm:w-[636px] xl:col-span-2 xl:col-start-1 xl:row-start-3 xl:w-[636px]">
+                <h3 className="max-w-[220px] font-display text-[23px] uppercase leading-[22px] text-gold">
+                  Visit our all services
+                </h3>
+                <p className="absolute bottom-[28px] left-[26px] max-w-[358px] text-[20px] leading-[23px] text-white">
+                  Complete care. Specialised expertise. Support through routine healthcare, illness
+                  and treatment.
+                </p>
+                <PillButton
+                  href="/services"
+                  variant="cream"
+                  className="absolute bottom-[18px] right-[18px]"
+                >
+                  See All
+                </PillButton>
+              </article>
 
-          <VipCard className="xl:col-start-2 xl:row-start-3" />
+              <PhotoCard
+                title="Pet Food & Nutrition"
+                titleClass="text-white"
+                bg="bg-olive-muted"
+                href="/services/nutrition"
+                gridClass="xl:col-start-3 xl:row-start-3"
+              >
+                <Animal
+                  src="/images/pet-food-nutrition.png"
+                  wrapClass="inset-0"
+                  imgClass="left-0 top-0 h-full w-full object-cover object-left"
+                />
+              </PhotoCard>
 
-          <PhotoCard title="Travel & Relocation" bg="bg-cream" href="/services/travel" className="xl:col-start-3 xl:row-start-3">
-            <Animal
-              src="/images/husky.png"
-              wrapClass="left-0 top-[46px] h-[268px] w-[314px]"
-              imgClass="left-[-21.06%] top-0 h-[122.01%] w-[156.13%]"
-            />
-          </PhotoCard>
+              <PhotoCard
+                title="Boutique & Accessories"
+                bg="bg-sage"
+                href="/services/boutique"
+                gridClass="xl:col-start-4 xl:row-start-3"
+              >
+                <Animal
+                  src="/images/red-cat.png"
+                  wrapClass="left-0 top-[63px] h-[251px] w-[314px]"
+                  imgClass="left-[-19.43%] top-0 h-[183.86%] w-[151.59%]"
+                />
+              </PhotoCard>
+            </>
+          ) : (
+            <>
+              <PhotoCard
+                title="Pet Food & Nutrition"
+                titleClass="text-white"
+                bg="bg-olive-muted"
+                href="/services/nutrition"
+                wide
+                gridClass="xl:col-span-2 xl:col-start-1 xl:row-start-3"
+              >
+                <Animal
+                  src="/images/pet-food-nutrition.png"
+                  wrapClass="right-0 bottom-0 top-0 w-[55%]"
+                  imgClass="inset-0 h-full w-full object-cover object-left"
+                />
+              </PhotoCard>
 
-          <PhotoCard title="Boutique & Accessories" bg="bg-sage" href="/services/boutique" className="xl:col-start-4 xl:row-start-3">
-            <Animal
-              src="/images/red-cat.png"
-              wrapClass="left-0 top-[63px] h-[251px] w-[314px]"
-              imgClass="left-[-19.43%] top-0 h-[183.86%] w-[151.59%]"
-            />
-          </PhotoCard>
-
-          <VipCard className="xl:col-start-1 xl:row-start-4" />
-
-          <PhotoCard
-            title="Pet Food & Nutrition"
-            titleClass="text-white"
-            bg="bg-olive-muted"
-            href="/services/nutrition"
-            className="xl:col-start-2 xl:row-start-4"
-          >
-            <Animal
-              src="/images/hero-cat.png"
-              wrapClass="inset-0"
-              imgClass="left-[-54.15%] top-[10.69%] h-full w-[157.18%]"
-            />
-          </PhotoCard>
-
-          <article className="relative h-[314px] w-[314px] overflow-hidden rounded-xl bg-olive p-6 transition-transform duration-500 hover:-translate-y-1 sm:col-span-2 sm:w-[636px] xl:col-span-2 xl:col-start-3 xl:row-start-4 xl:w-[636px]">
-            <h3 className="max-w-[220px] font-display text-[23px] uppercase leading-[22px] text-gold">
-              Visit our all services
-            </h3>
-            <p className="absolute bottom-[28px] left-[26px] max-w-[358px] text-[20px] leading-[23px] text-white">
-              Complete care. Specialised expertise. Support through routine healthcare, illness and
-              treatment.
-            </p>
-            <PillButton href="/services" variant="cream" className="absolute bottom-[18px] right-[18px]">
-              All Services
-            </PillButton>
-          </article>
+              <PhotoCard
+                title="Boutique & Accessories"
+                bg="bg-sage"
+                href="/services/boutique"
+                wide
+                gridClass="xl:col-span-2 xl:col-start-3 xl:row-start-3"
+              >
+                <Animal
+                  src="/images/red-cat.png"
+                  wrapClass="right-0 bottom-0 h-[280px] w-[380px]"
+                  imgClass="right-0 bottom-0 left-auto h-full w-auto max-w-none object-contain object-right-bottom"
+                />
+              </PhotoCard>
+            </>
+          )}
         </div>
       </Frame>
     </section>

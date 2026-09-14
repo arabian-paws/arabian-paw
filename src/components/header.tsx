@@ -4,14 +4,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/logo";
-import { PillButton, WHATSAPP_EMERGENCY } from "@/components/ui";
+import { PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY, PHONE_LANDLINE, PHONE_DISPLAY } from "@/components/ui";
 import { SERVICES } from "@/data/services";
 
 const links: { href: string; label: string; match?: string; exact?: boolean }[] = [
   { href: "/", label: "Home", match: "/" },
   { href: "/about", label: "About", match: "/about" },
-  { href: "/our-vets", label: "Our Vets", match: "/our-vets" },
+  { href: "/our-vets", label: "Our Team", match: "/our-vets" },
   { href: "/blogs", label: "Blog", match: "/blogs" },
+  { href: "/contact", label: "Contact", match: "/contact" },
 ];
 
 export function Header() {
@@ -106,11 +107,23 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-1.5 lg:flex">
-          <PillButton href="/contact" variant="sage" icon="/icons/medical.svg" size="sm">
+          <PillButton
+            href={WHATSAPP_EMERGENCY}
+            variant="sage"
+            icon="/icons/medical.svg"
+            size="sm"
+            subtitle={WHATSAPP_DISPLAY}
+          >
             Book Appointment
           </PillButton>
-          <PillButton href={WHATSAPP_EMERGENCY} variant="emergency" icon="/icons/medical-white.svg" size="sm">
-            24/7 • Emergency Service
+          <PillButton
+            href={PHONE_LANDLINE}
+            variant="emergency"
+            icon="/icons/medical-white.svg"
+            size="sm"
+            subtitle={PHONE_DISPLAY}
+          >
+            24/7 Emergency
           </PillButton>
         </div>
 
@@ -205,11 +218,23 @@ export function Header() {
               </Link>
             );
           })}
-          <PillButton href="/contact" variant="sage" icon="/icons/medical.svg" size="sm">
+          <PillButton
+            href={WHATSAPP_EMERGENCY}
+            variant="sage"
+            icon="/icons/medical.svg"
+            size="sm"
+            subtitle={WHATSAPP_DISPLAY}
+          >
             Book Appointment
           </PillButton>
-          <PillButton href={WHATSAPP_EMERGENCY} variant="emergency" icon="/icons/medical-white.svg" size="sm">
-            24/7 • Emergency Service
+          <PillButton
+            href={PHONE_LANDLINE}
+            variant="emergency"
+            icon="/icons/medical-white.svg"
+            size="sm"
+            subtitle={PHONE_DISPLAY}
+          >
+            24/7 Emergency
           </PillButton>
         </div>
       ) : null}

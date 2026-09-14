@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Frame, PillButton, WHATSAPP_EMERGENCY } from "@/components/ui";
+import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY, PHONE_LANDLINE, PHONE_DISPLAY } from "@/components/ui";
 
 export function Hero() {
   return (
@@ -19,13 +19,14 @@ export function Hero() {
                   Comprehensive veterinary care focused on your pet&apos;s health, comfort and well-being at every stage of life.
                 </p>
                 <PillButton
-                  href={WHATSAPP_EMERGENCY}
+                  href={PHONE_LANDLINE}
                   variant="emergency"
                   icon="/icons/medical-hero.svg"
                   size="sm"
-                  className="w-full text-[13px] sm:w-auto sm:text-[15px]"
+                  className="w-full sm:w-auto"
+                  subtitle={PHONE_DISPLAY}
                 >
-                  Open 24/7 • Emergency Service
+                  Open 24/7 Emergency
                 </PillButton>
               </div>
             </div>
@@ -33,10 +34,10 @@ export function Hero() {
             <div className="grid h-[180px] shrink-0 grid-cols-2 gap-2 sm:h-[240px] lg:h-[316px]">
               <div className="group relative overflow-hidden rounded-xl">
                 <Image
-                  src="/images/hero-vet.png"
-                  alt="Veterinarian examining a cat"
+                  src="/images/hero-main2.webp"
+                  alt="Veterinarian with a cat"
                   fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="315px"
                   priority
                 />
@@ -67,8 +68,13 @@ export function Hero() {
                   Dental Care
                 </p>
               </div>
-              <PillButton href="/contact" variant="cream" className="w-full px-0 sm:w-[200px] sm:shrink-0">
-                Book an Appointment
+              <PillButton
+                href={WHATSAPP_EMERGENCY}
+                variant="cream"
+                className="w-full px-0 sm:w-[220px] sm:shrink-0"
+                subtitle={WHATSAPP_DISPLAY}
+              >
+                Book Appointment
               </PillButton>
             </div>
           </div>
@@ -78,10 +84,10 @@ export function Hero() {
             style={{ animationDelay: "180ms" }}
           >
             <Image
-              src="/images/hero-main.png"
-              alt="Woman hugging a golden retriever"
+              src="/images/hero-main.webp"
+              alt="Veterinarian holding a dog"
               fill
-              className="object-cover object-[center_12%] transition-transform duration-[1.2s] ease-out hover:scale-[1.03]"
+              className="object-cover object-center transition-transform duration-[1.2s] ease-out hover:scale-[1.03]"
               sizes="633px"
               priority
             />

@@ -1,4 +1,4 @@
-import { Frame, PillButton, WHATSAPP_EMERGENCY } from "@/components/ui";
+import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY, PHONE_LANDLINE, PHONE_DISPLAY } from "@/components/ui";
 
 export function InnerServiceReasons({
   title,
@@ -36,14 +36,21 @@ export function InnerServiceReasons({
 
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-[22px]">
             <PillButton
-              href={WHATSAPP_EMERGENCY}
+              href={PHONE_LANDLINE}
               variant="emergency"
               icon="/icons/medical-white.svg"
               size="sm"
+              subtitle={PHONE_DISPLAY}
             >
-              24/7 • Emergency Service
+              24/7 Emergency
             </PillButton>
-            <PillButton href="/contact" variant="olive" icon="/icons/medical-cream.svg" size="sm">
+            <PillButton
+              href={WHATSAPP_EMERGENCY}
+              variant="olive"
+              icon="/icons/medical-cream.svg"
+              size="sm"
+              subtitle={WHATSAPP_DISPLAY}
+            >
               Book Appointment
             </PillButton>
           </div>

@@ -2,7 +2,7 @@
 
 import { useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
-import { Frame, PillButton } from "@/components/ui";
+import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY } from "@/components/ui";
 
 const DEPARTMENTS = [
   "Emergency & ICU",
@@ -260,7 +260,12 @@ function items(): CatalogItem[] {
       gridClass: "xl:col-start-2 xl:row-start-3",
       node: (
         <TextCard title="Book our consultation" className="">
-          <PillButton href="/contact" variant="ghost" className="h-[48px] px-8 text-[18px]">
+          <PillButton
+            href={WHATSAPP_EMERGENCY}
+            variant="ghost"
+            className="h-[48px] px-8 text-[18px]"
+            subtitle={WHATSAPP_DISPLAY}
+          >
             Book Appointment
           </PillButton>
         </TextCard>
@@ -280,9 +285,9 @@ function items(): CatalogItem[] {
           className=""
         >
           <Animal
-            src="/images/hero-cat.png"
+            src="/images/pet-food-nutrition.png"
             wrapClass="inset-0"
-            imgClass="left-[-54.15%] top-[10.69%] h-full w-[157.18%]"
+            imgClass="left-0 top-0 h-full w-full object-cover object-left"
           />
         </PhotoCard>
       ),

@@ -6,17 +6,13 @@ import { Frame, PillButton } from "@/components/ui";
 const fieldClass =
   "w-full rounded-[12px] border border-[#d7d7d7] bg-white px-[18px] text-base tracking-[-0.8px] text-ink outline-none placeholder:text-[#b1b1b1] transition-shadow duration-300 focus:border-olive/30 focus:shadow-[0px_6px_18px_rgba(58,61,45,0.14)]";
 
-const DEPARTMENTS = [
-  "Emergency & ICU",
-  "VIP Home Care",
-  "Diagnostics & Lab",
-  "Surgery",
-  "Dentistry",
-  "Travel & Relocation",
-  "Wellness & Vaccines",
-  "Grooming & Spa",
-  "Pet Food & Nutrition",
-  "Boutique & Accessories",
+const TOPICS = [
+  "General Enquiry",
+  "Appointment Request",
+  "Emergency",
+  "Services Information",
+  "Feedback",
+  "Other",
 ];
 
 export function ContactHero() {
@@ -46,7 +42,7 @@ export function ContactHero() {
                 icon="/icons/medical-cream.svg"
                 className="mt-10"
               >
-                Book an Appointment
+                Get in Touch
               </PillButton>
             </div>
 
@@ -89,13 +85,13 @@ export function ContactHero() {
           <form
             id="form"
             onSubmit={onSubmit}
-            className="flex flex-col gap-1.5 rounded-[12px] bg-olive px-5 py-10 shadow-[2px_2px_2px_rgba(0,0,0,0.25)] sm:px-[59px] sm:py-[54px] lg:min-h-[721px]"
+            className="flex flex-col gap-1.5 rounded-[12px] bg-olive px-5 py-10 shadow-[2px_2px_2px_rgba(0,0,0,0.25)] sm:px-[59px] sm:py-[54px] lg:min-h-[640px]"
           >
             <h2 className="mb-2 font-display text-[22px] uppercase leading-[28px] text-cream sm:text-[26px]">
-              Your Pet's Next Visit Starts Here
+              Get in Touch
             </h2>
             <p className="mb-4 text-sm leading-5 text-cream/80">
-              Tell us a little about your pet and the reason for your visit. Our team will help arrange the appropriate appointment.
+              Send us a message and our team will get back to you as soon as possible.
             </p>
             <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2">
               <input name="firstName" placeholder="First Name" className={`h-[52px] ${fieldClass}`} />
@@ -119,16 +115,16 @@ export function ContactHero() {
               />
             </label>
             <label className={`relative flex h-[52px] items-center ${fieldClass} pr-10`}>
-              <span className="sr-only">Select service</span>
+              <span className="sr-only">Select topic</span>
               <select
-                name="service"
+                name="topic"
                 defaultValue=""
                 className="h-full w-full appearance-none bg-transparent text-base tracking-[-0.8px] text-ink outline-none"
               >
                 <option value="" disabled>
-                  Select Service
+                  Select Topic
                 </option>
-                {DEPARTMENTS.map((name) => (
+                {TOPICS.map((name) => (
                   <option key={name} value={name}>
                     {name}
                   </option>
@@ -140,31 +136,33 @@ export function ContactHero() {
                 className="pointer-events-none absolute right-[18px] top-1/2 size-6 -translate-y-1/2"
               />
             </label>
-            <input
-              name="petName"
-              placeholder="Pet Name"
-              className={`h-[52px] ${fieldClass}`}
-            />
+            <input name="subject" placeholder="Subject" className={`h-[52px] ${fieldClass}`} />
             <textarea
-              name="reason"
-              placeholder="Reason for Visit"
-              className={`h-[180px] resize-none py-[18px] lg:h-[200px] ${fieldClass}`}
-            />
-            <input
-              type="datetime-local"
-              name="preferredDateTime"
-              placeholder="Preferred Date & Time"
-              className={`h-[52px] ${fieldClass}`}
+              name="message"
+              placeholder="Your Message"
+              className={`h-[220px] resize-none py-[18px] lg:h-[260px] ${fieldClass}`}
             />
             <button
               type="submit"
               className="flex h-[60px] w-full items-center justify-center rounded-[12px] border border-cream bg-gold text-[20px] font-bold tracking-[-1.2px] text-olive transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(58,61,45,0.22)] sm:text-[24px]"
             >
-              Book Appointment
+              Send Message
             </button>
             <p className="mt-2 text-center text-sm leading-5 text-cream/80">
-              For emergencies, please contact the clinic directly rather than submitting an online
-              booking request.
+              For emergencies, please call{" "}
+              <a href="tel:+97142599244" className="underline hover:text-gold">
+                04 259 9244
+              </a>{" "}
+              or WhatsApp{" "}
+              <a
+                href="https://wa.me/971565110765"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-gold"
+              >
+                +971 56 511 0765
+              </a>
+              .
             </p>
           </form>
         </div>

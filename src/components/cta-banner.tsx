@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Frame, PillButton } from "@/components/ui";
+import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY } from "@/components/ui";
 
 export function CtaBanner() {
   return (
@@ -16,8 +16,13 @@ export function CtaBanner() {
               <p className="mt-6 max-w-[480px] text-[22px] leading-[24px] text-olive">
                 Tell us about your pet and what they need. Our team will help you find the right appointment and care.
               </p>
-              <PillButton href="/contact" variant="olive" className="mt-8 w-[200px] px-0">
-                Book an Appointment
+              <PillButton
+                href={WHATSAPP_EMERGENCY}
+                variant="olive"
+                className="mt-8 w-auto min-w-[200px] px-6"
+                subtitle={WHATSAPP_DISPLAY}
+              >
+                Book Appointment
               </PillButton>
             </div>
             <div className="relative h-[280px] lg:h-[394px]">
