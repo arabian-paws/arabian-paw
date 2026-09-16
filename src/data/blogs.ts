@@ -22,7 +22,7 @@ export const BLOGS: BlogPost[] = [
     description:
       "Relocating to or from the UAE with your pet — permits, microchips, rabies titers, fit-to-fly certificates and crate preparation.",
     tag: "Travel",
-    date: "May 7, 2024",
+    date: "September 15, 2026",
     image: "/images/blog-relocation.webp",
     dot: "bg-[#97d4ff]",
     body: [
@@ -80,7 +80,7 @@ export const BLOGS: BlogPost[] = [
     description:
       "How to recognise heatstroke signs, give safe first aid, and protect pets during Dubai's extreme summer heat.",
     tag: "Tips",
-    date: "May 7, 2024",
+    date: "September 11, 2026",
     image: "/images/svc/vip-comfort.jpg",
     dot: "bg-[#ff9797]",
     body: [
@@ -142,7 +142,7 @@ export const BLOGS: BlogPost[] = [
     description:
       "Why bad breath matters, how gum disease affects overall health, and what professional dental care involves.",
     tag: "Dental",
-    date: "May 7, 2024",
+    date: "September 8, 2026",
     image: "/images/blog-dental.webp",
     dot: "bg-[#ffa0ea]",
     body: [
@@ -206,7 +206,7 @@ export const BLOGS: BlogPost[] = [
     description:
       "Core and non-core vaccines, booster schedules, and UAE legal requirements for pet registration and travel.",
     tag: "Wellness",
-    date: "May 7, 2024",
+    date: "September 2, 2026",
     image: "/images/blog-vaccination.webp",
     dot: "bg-[#c6cf9f]",
     body: [

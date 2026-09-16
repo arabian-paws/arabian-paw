@@ -68,7 +68,7 @@ function PhotoCard({
     >
       {children}
       <h3
-        className={`absolute left-[26px] top-[26px] z-10 w-[180px] font-display text-[23px] uppercase leading-[22px] ${titleClass}`}
+        className={`absolute left-[26px] top-[26px] z-10 w-[180px] font-display text-[23px] uppercase leading-[22px] drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] ${titleClass}`}
       >
         {title}
       </h3>
@@ -287,7 +287,7 @@ function items(): CatalogItem[] {
           <Animal
             src="/images/pet-food-nutrition.png"
             wrapClass="inset-0"
-            imgClass="left-0 top-0 h-full w-full object-cover object-left"
+            imgClass="left-0 top-[18%] h-[92%] w-full object-cover object-left"
           />
         </PhotoCard>
       ),

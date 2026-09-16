@@ -36,12 +36,12 @@ export function Footer() {
 
       <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col px-5 pb-6 pt-12 lg:px-[80px] lg:pb-8 lg:pt-14">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,280px)_minmax(0,1fr)_minmax(0,240px)] lg:items-start lg:gap-10">
-          <div className="relative z-20 max-w-[260px]">
+          <div className="relative z-20 max-w-[260px] lg:pb-8">
             <Logo variant="footer" />
             <p className="mt-4 max-w-[260px] text-sm font-light leading-[22px] text-cream">
               Exceptional Care. Healthier Smiles.
             </p>
-            <p className="mt-2 max-w-[260px] text-xs font-light leading-[18px] text-cream/70">
+            <p className="mt-2 max-w-[220px] text-xs font-light leading-[18px] text-cream/70">
               Veterinary Care | Dental Care | Emergency &amp; Critical Care | Wellness
             </p>
           </div>
@@ -139,13 +139,13 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute bottom-0 left-0 z-0 hidden h-[380px] w-[340px] lg:block">
+      <div className="pointer-events-none absolute bottom-0 left-0 z-0 hidden h-[220px] w-[300px] lg:block">
         <Image
           src="/images/footer-cat-dog.png"
           alt="Cat and dog"
           fill
-          className="object-contain object-left-bottom mix-blend-screen opacity-90"
-          sizes="340px"
+          className="object-contain object-left-bottom mix-blend-screen opacity-80"
+          sizes="300px"
         />
       </div>
       <div className="relative z-10 pb-4 text-center text-xs font-light text-cream/60">

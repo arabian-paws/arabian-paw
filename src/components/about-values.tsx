@@ -66,8 +66,8 @@ export function AboutValues() {
         </div>
 
         <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)]">
-          <article className="relative min-h-[294px] overflow-hidden rounded-[24px] bg-sage p-8 sm:p-[42px]">
-            <div className="relative z-10 max-w-[210px]">
+          <article className="relative flex min-h-[294px] flex-col overflow-hidden rounded-[24px] bg-sage p-8 sm:p-[42px]">
+            <div className="relative z-10 max-w-[280px] sm:max-w-[240px] lg:max-w-[210px]">
               <h3 className="font-display text-2xl leading-[30px] text-olive">Teamwork</h3>
               <p className="mt-3 text-base font-medium leading-[21px] text-muted">
                 Great veterinary care is a team effort. Our veterinary, nursing and support teams
@@ -77,7 +77,7 @@ export function AboutValues() {
             <img
               src="/images/about-teamwork-pets.png"
               alt="Dog, cat and rabbit together"
-              className="pointer-events-none absolute bottom-0 right-0 h-[285px] w-[285px] object-contain object-bottom"
+              className="pointer-events-none mt-6 h-[200px] w-[200px] self-end object-contain object-bottom lg:absolute lg:bottom-0 lg:right-0 lg:mt-0 lg:h-[285px] lg:w-[285px]"
             />
           </article>
           <ValueCard

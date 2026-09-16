@@ -58,7 +58,7 @@ function PhotoCard({
       >
         {children}
         <h3
-          className={`absolute left-[26px] top-[26px] z-10 w-[200px] font-display text-[23px] uppercase leading-[22px] ${titleClass}`}
+          className={`absolute left-[26px] top-[26px] z-10 w-[200px] font-display text-[23px] uppercase leading-[22px] drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] ${titleClass}`}
         >
           {title}
         </h3>
@@ -194,18 +194,18 @@ export function Services({
 
           {showVisitAll ? (
             <>
-              <article className="relative h-[314px] w-[314px] overflow-hidden rounded-xl bg-olive p-6 transition-transform duration-500 hover:-translate-y-1 sm:col-span-2 sm:w-[636px] xl:col-span-2 xl:col-start-1 xl:row-start-3 xl:w-[636px]">
+              <article className="relative flex h-auto min-h-[314px] w-[314px] flex-col overflow-hidden rounded-xl bg-olive p-6 transition-transform duration-500 hover:-translate-y-1 sm:col-span-2 sm:w-[636px] xl:col-span-2 xl:col-start-1 xl:row-start-3 xl:h-[314px] xl:w-[636px]">
                 <h3 className="max-w-[220px] font-display text-[23px] uppercase leading-[22px] text-gold">
                   Visit our all services
                 </h3>
-                <p className="absolute bottom-[28px] left-[26px] max-w-[358px] text-[20px] leading-[23px] text-white">
+                <p className="mt-6 max-w-[360px] flex-1 text-[18px] leading-[23px] text-white sm:text-[20px] xl:mt-auto xl:max-w-[340px] xl:pr-4 xl:pb-14">
                   Complete care. Specialised expertise. Support through routine healthcare, illness
                   and treatment.
                 </p>
                 <PillButton
                   href="/services"
                   variant="cream"
-                  className="absolute bottom-[18px] right-[18px]"
+                  className="mt-6 self-start xl:absolute xl:bottom-[18px] xl:right-[18px] xl:mt-0"
                 >
                   See All
                 </PillButton>
@@ -221,7 +221,7 @@ export function Services({
                 <Animal
                   src="/images/pet-food-nutrition.png"
                   wrapClass="inset-0"
-                  imgClass="left-0 top-0 h-full w-full object-cover object-left"
+                  imgClass="left-0 top-[18%] h-[92%] w-full object-cover object-left"
                 />
               </PhotoCard>
 
@@ -250,7 +250,7 @@ export function Services({
               >
                 <Animal
                   src="/images/pet-food-nutrition.png"
-                  wrapClass="right-0 bottom-0 top-0 w-[55%]"
+                  wrapClass="right-0 bottom-0 top-[12%] w-[55%]"
                   imgClass="inset-0 h-full w-full object-cover object-left"
                 />
               </PhotoCard>

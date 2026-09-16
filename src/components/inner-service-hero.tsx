@@ -40,7 +40,7 @@ export function InnerServiceHero({ service }: { service: ServicePageData }) {
           <div
             className={
               service.heroWrapClass
-                ? `pointer-events-none absolute hidden overflow-hidden lg:block ${service.heroWrapClass}`
+                ? `pointer-events-none absolute hidden lg:block ${service.heroWrapClass}`
                 : "pointer-events-none absolute left-[414px] top-0 hidden h-[720px] w-[842px] overflow-hidden pt-10 lg:block"
             }
           >
