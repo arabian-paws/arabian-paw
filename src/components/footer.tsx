@@ -107,14 +107,14 @@ export function Footer() {
         </div>
 
         <div className="relative z-10 mt-10 lg:mt-12">
-          <div className="flex min-h-[160px] items-center justify-end rounded-xl bg-gold px-6 py-8 sm:min-h-[180px] lg:pl-[420px] lg:pr-12">
-            <div className="relative z-10 max-w-[470px] lg:text-right">
+          <div className="flex min-h-[160px] items-center justify-start rounded-xl bg-gold px-6 py-8 sm:min-h-[180px] lg:pl-12 lg:pr-[420px]">
+            <div className="relative z-10 max-w-[470px] text-left">
               <h2 className="font-display text-[24px] uppercase leading-[28px] text-olive lg:text-[32px] lg:leading-[36px]">
                 Your pet deserves
                 <br />
                 exceptional care
               </h2>
-              <div className="mt-5 flex flex-wrap gap-2 lg:justify-end">
+              <div className="mt-5 flex flex-wrap gap-2 justify-start">
                 <PillButton
                   href={WHATSAPP_EMERGENCY}
                   variant="olive"
