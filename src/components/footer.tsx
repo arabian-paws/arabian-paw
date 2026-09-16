@@ -106,7 +106,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="relative z-20 mt-10 lg:mt-12">
+        <div className="relative z-10 mt-10 lg:mt-12">
           <div className="flex min-h-[160px] items-center justify-end rounded-xl bg-gold px-6 py-8 sm:min-h-[180px] lg:pl-[420px] lg:pr-12">
             <div className="relative z-10 max-w-[470px] lg:text-right">
               <h2 className="font-display text-[24px] uppercase leading-[28px] text-olive lg:text-[32px] lg:leading-[36px]">
@@ -139,12 +139,12 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute bottom-0 left-0 z-0 hidden h-[300px] w-[400px] lg:block">
+      <div className="pointer-events-none absolute bottom-0 left-0 z-20 hidden h-[300px] w-[400px] lg:block">
         <Image
           src="/images/footer-cat-dog.png"
           alt="Cat and dog"
           fill
-          className="object-contain object-left-bottom mix-blend-screen opacity-90"
+          className="object-contain object-left-bottom mix-blend-screen opacity-95"
           sizes="400px"
         />
       </div>

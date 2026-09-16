@@ -250,8 +250,8 @@ export function Services({
               >
                 <Animal
                   src="/images/pet-food-nutrition.png"
-                  wrapClass="right-0 bottom-0 top-[12%] w-[55%]"
-                  imgClass="inset-0 h-full w-full object-cover object-left"
+                  wrapClass="right-3 bottom-0 top-3 w-[50%]"
+                  imgClass="inset-0 !max-w-full h-full w-full object-contain object-right-bottom"
                 />
               </PhotoCard>
 
