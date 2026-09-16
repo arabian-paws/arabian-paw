@@ -353,7 +353,7 @@ export const SERVICES: ServicePageData[] = [
       "VIP veterinary care at your doorstep, from routine visits and diagnostics to pet transport and private end-of-life care, designed around comfort and convenience.",
     heroImage: "/images/vip-home-care.png",
     heroAlt: "Woman holding a white puppy",
-    heroWrapClass: "right-10 bottom-0 h-[1040px] w-[1200px]",
+    heroWrapClass: "right-8 bottom-0 h-[680px] w-[740px]",
     heroImageClass: "size-full object-contain object-right-bottom",
     badge: "Care That Comes To You",
     metaTitle: "VIP Home Veterinary Care | Arabian Paws",
