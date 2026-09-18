@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY, PHONE_LANDLINE, PHONE_DISPLAY } from "@/components/ui";
+import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY } from "@/components/ui";
 
 export function Hero() {
   return (
@@ -19,12 +19,12 @@ export function Hero() {
                   Comprehensive veterinary care focused on your pet&apos;s health, comfort and well-being at every stage of life.
                 </p>
                 <PillButton
-                  href={PHONE_LANDLINE}
+                  href={WHATSAPP_EMERGENCY}
                   variant="emergency"
                   icon="/icons/medical-hero.svg"
                   size="sm"
                   className="w-full sm:w-auto"
-                  subtitle={PHONE_DISPLAY}
+                  subtitle={WHATSAPP_DISPLAY}
                 >
                   Open 24/7 Emergency
                 </PillButton>
@@ -45,9 +45,9 @@ export function Hero() {
               <div className="group relative overflow-hidden rounded-full bg-gold">
                 <Image
                   src="/images/hero-cat.png"
-                  alt="Cat looking at the camera"
+                  alt="Happy dog looking at the camera"
                   fill
-                  className="object-cover object-[68%_center] transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="object-cover object-bottom transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="316px"
                   priority
                 />

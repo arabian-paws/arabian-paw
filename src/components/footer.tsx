@@ -125,11 +125,11 @@ export function Footer() {
                   Book Appointment
                 </PillButton>
                 <PillButton
-                  href={PHONE_LANDLINE}
+                  href={WHATSAPP_EMERGENCY}
                   variant="cream"
                   icon="/icons/medical-footer-dark.svg"
                   size="sm"
-                  subtitle={PHONE_DISPLAY}
+                  subtitle={WHATSAPP_DISPLAY}
                 >
                   24/7 Emergency
                 </PillButton>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Inter, Syne, Urbanist } from "next/font/google";
+import { FloatingActions } from "@/components/floating-actions";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Reveal } from "@/components/reveal";
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Reveal>
           <Footer />
         </Reveal>
+        <FloatingActions />
       </body>
     </html>
   );

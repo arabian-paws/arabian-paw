@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY, PHONE_LANDLINE, PHONE_DISPLAY } from "@/components/ui";
+import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY } from "@/components/ui";
 import { BLOGS, getBlog } from "@/data/blogs";
 
 export function generateStaticParams() {
@@ -116,11 +116,11 @@ export default async function BlogPostPage({
               Book Appointment
             </PillButton>
             <PillButton
-              href={PHONE_LANDLINE}
+              href={WHATSAPP_EMERGENCY}
               variant="emergency"
               icon="/icons/medical-white.svg"
               size="sm"
-              subtitle={PHONE_DISPLAY}
+              subtitle={WHATSAPP_DISPLAY}
             >
               24/7 Emergency
             </PillButton>
