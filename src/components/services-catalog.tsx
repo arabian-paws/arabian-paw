@@ -180,8 +180,8 @@ function items(): CatalogItem[] {
         <PhotoCard title="Surgery" bg="bg-sage" href="/services/surgery" className="">
           <Animal
             src="/images/hero-cat.png"
-            wrapClass="inset-0"
-            imgClass="left-[-54.15%] top-[10.69%] h-full w-[157.18%]"
+            wrapClass="left-0 top-[22px] h-[292px] w-[314px]"
+            imgClass="left-[-11%] top-0 h-[120%] w-[112%] object-cover object-[58%_8%]"
           />
         </PhotoCard>
       ),
