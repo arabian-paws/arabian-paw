@@ -1,31 +1,6 @@
 import Image from "next/image";
-import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY } from "@/components/ui";
+import { Frame } from "@/components/ui";
 import type { ServiceBlock } from "@/data/services";
-
-function Actions() {
-  return (
-    <div className="flex flex-col items-start gap-3 sm:flex-row sm:gap-[22px]">
-      <PillButton
-        href={WHATSAPP_EMERGENCY}
-        variant="emergency"
-        icon="/icons/medical-white.svg"
-        size="sm"
-        subtitle={WHATSAPP_DISPLAY}
-      >
-        24/7 Emergency
-      </PillButton>
-      <PillButton
-        href={WHATSAPP_EMERGENCY}
-        variant="olive"
-        icon="/icons/medical-cream.svg"
-        size="sm"
-        subtitle={WHATSAPP_DISPLAY}
-      >
-        Book Appointment
-      </PillButton>
-    </div>
-  );
-}
 
 export function InnerServiceBlocks({ blocks }: { blocks: ServiceBlock[] }) {
   return (
@@ -63,9 +38,6 @@ export function InnerServiceBlocks({ blocks }: { blocks: ServiceBlock[] }) {
                   <p className="mt-6 max-w-[540px] text-[18px] leading-[26px] tracking-[-0.66px] text-black sm:mt-8 sm:text-[20px] sm:leading-[28px]">
                     {block.body}
                   </p>
-                  <div className="mt-8">
-                    <Actions />
-                  </div>
                 </div>
               </article>
             );
