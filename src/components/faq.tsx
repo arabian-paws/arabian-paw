@@ -39,7 +39,11 @@ const faqs = [
   },
 ];
 
-export function Faq() {
+export function Faq({
+  items = faqs,
+}: {
+  items?: { question: string; answer: string }[];
+}) {
   const [open, setOpen] = useState(0);
 
   return (
@@ -52,7 +56,7 @@ export function Faq() {
       </h2>
 
       <div className="flex flex-col gap-5">
-        {faqs.map((item, index) => {
+        {items.map((item, index) => {
           const isOpen = open === index;
           return (
             <button

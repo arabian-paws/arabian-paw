@@ -6,28 +6,12 @@ const vets = [
     role: "Medical Director, Veterinary Surgeon",
     experience: "12 Years Of Experience",
     image: "/images/vet-mudasser.webp",
-    offset: false,
   },
   {
     name: "Mohsin Shafique",
     role: "General Manager",
     experience: "5 Years Of Experience",
     image: "/images/vet-mohsin.webp",
-    offset: true,
-  },
-  {
-    name: "Usman Ali",
-    role: "Senior Veterinary Nurse",
-    experience: null,
-    image: "/images/vet-usman.webp",
-    offset: false,
-  },
-  {
-    name: "Hamid",
-    role: "Nurse",
-    experience: null,
-    image: "/images/vet-hamid.webp",
-    offset: true,
   },
 ];
 
@@ -41,11 +25,11 @@ export function Vets({ showCta = true }: { showCta?: boolean }) {
         <h2 className="mb-8 text-center font-display text-[36px] uppercase leading-[34px] text-olive">
           Meet Our Team
         </h2>
-        <div className="grid items-start gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mx-auto grid max-w-[860px] items-start gap-6 sm:grid-cols-2">
           {vets.map((vet) => (
             <article
               key={vet.name}
-              className={`group relative h-[488px] overflow-hidden rounded-[24px] bg-cream transition-transform duration-500 hover:-translate-y-2 ${vet.offset ? "xl:mt-[80px]" : ""}`}
+              className="group relative h-[488px] overflow-hidden rounded-[24px] bg-cream transition-transform duration-500 hover:-translate-y-2"
             >
               <img
                 src={vet.image}
@@ -71,19 +55,19 @@ export function Vets({ showCta = true }: { showCta?: boolean }) {
           ))}
         </div>
         {showCta ? (
-          <div className="mt-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div className="mx-auto mt-10 flex max-w-[860px] flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <p className="max-w-[480px] text-[22px] leading-[24px] text-olive">
-              Our founding team brings together veterinary, nursing and administrative expertise,
-              with years of experience working in professional veterinary environments.
+              Our founding team brings together veterinary and administrative expertise, with years
+              of experience working in professional veterinary environments.
             </p>
             <PillButton href="/our-vets" variant="olive" className="w-[200px] px-0">
               Meet Our Team
             </PillButton>
           </div>
         ) : (
-          <p className="mt-10 max-w-[640px] text-[22px] leading-[24px] text-olive">
-            Our founding team brings together veterinary, nursing and administrative expertise, with
-            years of experience working in professional veterinary environments.
+          <p className="mx-auto mt-10 max-w-[640px] text-center text-[22px] leading-[24px] text-olive">
+            Our founding team brings together veterinary and administrative expertise, with years of
+            experience working in professional veterinary environments.
           </p>
         )}
       </Frame>
