@@ -87,7 +87,7 @@ export function Hero() {
               src="/images/hero-main.webp"
               alt="Veterinarian holding a dog"
               fill
-              className="object-cover object-center transition-transform duration-[1.2s] ease-out hover:scale-[1.03]"
+              className="object-cover object-top transition-transform duration-[1.2s] ease-out hover:scale-[1.03] sm:object-center"
               sizes="633px"
               priority
             />
