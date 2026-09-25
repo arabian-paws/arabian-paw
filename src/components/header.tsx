@@ -10,7 +10,6 @@ import { SERVICES } from "@/data/services";
 const links: { href: string; label: string; match?: string; exact?: boolean }[] = [
   { href: "/", label: "Home", match: "/" },
   { href: "/about", label: "About", match: "/about" },
-  { href: "/membership", label: "Membership", match: "/membership" },
   { href: "/our-vets", label: "Our Team", match: "/our-vets" },
   { href: "/blogs", label: "Blog", match: "/blogs" },
   { href: "/contact", label: "Contact", match: "/contact" },
@@ -29,7 +28,7 @@ export function Header() {
           <Logo className="h-[60px] w-[136px] lg:h-[77px] lg:w-[173px]" />
         </Link>
 
-        <nav className="hidden items-center gap-5 xl:gap-[28px] lg:flex">
+        <nav className="hidden items-center gap-7 xl:gap-[38px] lg:flex">
           {links.slice(0, 2).map((link) => {
             const active =
               link.match === "/"
