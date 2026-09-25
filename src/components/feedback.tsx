@@ -58,6 +58,12 @@ export function Feedback() {
             placeholder="Message"
             className={`h-[260px] resize-none py-[16px] ${fieldClass}`}
           />
+          <button
+            type="submit"
+            className="flex h-[52px] w-full items-center justify-center rounded-[12px] bg-olive text-[18px] font-bold tracking-[-0.8px] text-cream transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(58,61,45,0.22)]"
+          >
+            Submit
+          </button>
         </form>
       </Frame>
     </section>
