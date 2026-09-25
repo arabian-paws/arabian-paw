@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent } from "react";
-import { Frame, PillButton } from "@/components/ui";
+import { Frame } from "@/components/ui";
 
 const fieldClass =
   "w-full rounded-[12px] border border-transparent bg-white px-[18px] text-base tracking-[-0.8px] text-ink shadow-[0px_2px_8px_rgba(0,0,0,0.08)] outline-none placeholder:text-[#b1b1b1] transition-shadow duration-300 focus:border-olive/20 focus:shadow-[0px_6px_18px_rgba(58,61,45,0.14)]";
@@ -23,9 +23,6 @@ export function Feedback() {
           <p className="mt-8 text-[22px] leading-[24px] text-olive">
             Your feedback helps us create a better experience for you and your pet.
           </p>
-          <PillButton href="#feedback" variant="olive" className="mt-10 w-[200px] px-0">
-            Give Feedback
-          </PillButton>
         </div>
 
         <form onSubmit={onSubmit} className="flex w-full flex-col gap-3">
