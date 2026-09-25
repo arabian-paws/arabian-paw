@@ -28,10 +28,41 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://www.arabianpaws.ae";
+const BRAND_ICON = "https://www.arabianpaws.ae/icons/logo-paw.svg";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Arabian Paws Veterinary Clinic | Dubai",
   description:
     "Where every paw finds expert care. Arabian Paws Veterinary Clinic in Majan, Dubai — 24/7 emergency service, veterinary care and specialised dental care.",
+  icons: {
+    icon: [{ url: BRAND_ICON, type: "image/svg+xml" }],
+    shortcut: BRAND_ICON,
+    apple: BRAND_ICON,
+  },
+  openGraph: {
+    title: "Arabian Paws Veterinary Clinic | Dubai",
+    description:
+      "Where every paw finds expert care. Arabian Paws Veterinary Clinic in Majan, Dubai — 24/7 emergency service, veterinary care and specialised dental care.",
+    url: SITE_URL,
+    siteName: "Arabian Paws",
+    images: [
+      {
+        url: BRAND_ICON,
+        alt: "Arabian Paws",
+      },
+    ],
+    locale: "en_AE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Arabian Paws Veterinary Clinic | Dubai",
+    description:
+      "Where every paw finds expert care. Arabian Paws Veterinary Clinic in Majan, Dubai — 24/7 emergency service, veterinary care and specialised dental care.",
+    images: [BRAND_ICON],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
