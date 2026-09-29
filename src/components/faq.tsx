@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "We're based in Majan and primarily serve Majan, Al Barari and the surrounding residential communities, including nearby Emirates cabin crew residences.",
+      "We are based in Majan, Dubai, but our veterinary services are available across Dubai.",
   },
   {
     question: "Do I need an appointment for emergency care?",
