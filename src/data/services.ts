@@ -245,7 +245,7 @@ export const SERVICES: ServicePageData[] = [
       },
       {
         title: "Routine Spay & Neuter",
-        body: "Spay and neuter procedures are performed with careful surgical planning and advanced anaesthesia monitoring to keep your pet safely monitored throughout the procedure.",
+        body: "Spay and castration packages include pre-operative blood testing, careful surgical planning and advanced anaesthesia monitoring. Cat and dog packages are listed separately, and dog packages are for pets weighing 1 to 10 kg.",
         image: "/images/svc/vaccine-cat.jpg",
         alt: "Cat in a recovery suit during spay and neuter care",
       },
@@ -307,7 +307,7 @@ export const SERVICES: ServicePageData[] = [
     blocks: [
       {
         title: "Ultrasonic Scaling & Polishing",
-        body: "Professional ultrasonic scaling removes plaque and tartar, followed by thorough cleaning and polishing under safe anaesthesia to keep your pet comfortable.",
+        body: "Professional ultrasonic scaling removes plaque and tartar, followed by thorough cleaning and polishing. Dental packages include pre-operative blood testing and are performed under safe anaesthesia.",
         image: "/images/svc/dental-exam.jpg",
         alt: "Veterinarian examining a dachshund’s teeth during dental scaling",
       },

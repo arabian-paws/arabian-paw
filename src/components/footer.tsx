@@ -15,6 +15,7 @@ const quickLinks: Record<string, string> = {
   Home: "/",
   "About Us": "/about",
   Services: "/services",
+  Packages: "/packages",
   Membership: "/membership",
   "Our Team": "/our-vets",
   Blog: "/blogs",

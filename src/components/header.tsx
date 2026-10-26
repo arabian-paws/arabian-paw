@@ -10,6 +10,8 @@ import { SERVICES } from "@/data/services";
 const links: { href: string; label: string; match?: string; exact?: boolean }[] = [
   { href: "/", label: "Home", match: "/" },
   { href: "/about", label: "About", match: "/about" },
+  { href: "/packages", label: "Packages", match: "/packages" },
+  { href: "/membership", label: "Membership", match: "/membership" },
   { href: "/our-vets", label: "Our Team", match: "/our-vets" },
   { href: "/blogs", label: "Blog", match: "/blogs" },
   { href: "/contact", label: "Contact", match: "/contact" },

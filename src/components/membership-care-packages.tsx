@@ -1,11 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { useMemo, useState } from "react";
 import { Frame, PillButton } from "@/components/ui";
 import {
-  CARE_PACKAGES,
+  PACKAGE_SECTIONS,
   carePackageWhatsappUrl,
+  packagesFor,
+  type PackageCategory,
   type PetType,
 } from "@/data/membership";
 
@@ -14,23 +15,24 @@ const PETS: { id: PetType; label: string }[] = [
   { id: "dog", label: "Dog" },
 ];
 
-export function MembershipCarePackages() {
+export function CarePackages({ category }: { category: PackageCategory }) {
+  const section = PACKAGE_SECTIONS.find((item) => item.id === category);
   const [pet, setPet] = useState<PetType>("cat");
-  const packages = useMemo(
-    () => CARE_PACKAGES.filter((item) => item.pet === pet),
-    [pet],
-  );
+  const packages = useMemo(() => packagesFor(category, pet), [category, pet]);
+
+  if (!section) return null;
 
   return (
-    <section id="packages" className="pt-16 lg:pt-[86px]">
+    <section id={category} className="scroll-mt-6 pt-16 lg:pt-[86px]">
       <Frame>
         <div className="mx-auto max-w-[760px] text-center">
-          <h2 className="font-display text-[28px] uppercase leading-[34px] text-olive sm:text-[36px] sm:leading-[40px]">
-            Select your pet &amp; pick the right package
-          </h2>
-          <p className="mt-4 text-[16px] leading-[24px] text-olive sm:text-[20px]">
-            Cat and dog packages with consultations, monitoring and aftercare included.
+          <p className="text-[13px] font-bold uppercase tracking-[-0.16px] text-olive-muted">
+            Service
           </p>
+          <h2 className="mt-2 font-display text-[28px] uppercase leading-[34px] text-olive sm:text-[36px] sm:leading-[40px]">
+            {section.title}
+          </h2>
+          <p className="mt-4 text-[16px] leading-[24px] text-olive sm:text-[20px]">{section.intro}</p>
         </div>
 
         <div className="mt-8 flex justify-center">
@@ -57,20 +59,11 @@ export function MembershipCarePackages() {
           {packages.map((pkg) => (
             <article
               key={pkg.id}
-              className="group flex h-full flex-col overflow-hidden rounded-[12px] border border-[#d7d7d7] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[2px_2px_1px_rgba(58,61,45,0.5)]"
+              className="flex h-full flex-col overflow-hidden rounded-[12px] border border-[#d7d7d7] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[2px_2px_1px_rgba(58,61,45,0.5)]"
             >
-              <div className="relative h-[200px] overflow-hidden">
-                <Image
-                  src={pkg.image}
-                  alt={pkg.imageAlt}
-                  fill
-                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  sizes="(min-width: 1024px) 400px, 100vw"
-                />
-              </div>
               <div className="flex flex-1 flex-col px-6 py-7">
                 <p className="text-[13px] font-bold uppercase tracking-[-0.16px] text-olive-muted">
-                  {pet === "cat" ? "Cat package" : "Dog package"}
+                  {pet === "cat" ? "Cat" : "Dog"} · {section.title}
                 </p>
                 <h3 className="mt-2 font-display text-[22px] uppercase leading-[26px] text-olive">
                   {pkg.title}

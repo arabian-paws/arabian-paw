@@ -5,10 +5,12 @@ function whatsappWithText(message: string) {
 }
 
 export type PetType = "cat" | "dog";
+export type PackageCategory = "surgery" | "dental";
 
 export type CarePackage = {
   id: string;
   pet: PetType;
+  category: PackageCategory;
   title: string;
   price: string;
   priceLabel: string;
@@ -33,7 +35,26 @@ export type MembershipPlan = {
 export type CompareValue = string | boolean;
 
 export const CARE_INTRO =
-  "We've bundled the care pets need most often into straightforward packages, so routine procedures, preventive treatments and ongoing wellness are easier to plan for and priced clearly upfront. Each package includes the consultations, monitoring, and aftercare that come with it, plus a few extras at no cost.";
+  "We've bundled the care pets need most often into straightforward packages, so routine procedures, preventive treatments and ongoing wellness are easier to plan for and priced clearly upfront. Every procedure package includes pre-operative blood testing, plus the consultations, monitoring, and aftercare that come with it.";
+
+export const PACKAGE_SECTIONS: {
+  id: PackageCategory;
+  title: string;
+  intro: string;
+}[] = [
+  {
+    id: "surgery",
+    title: "Surgery",
+    intro:
+      "Spay and castration for cats and dogs. Each package includes pre-operative blood testing. Dog packages are for pets weighing 1 to 10 kg.",
+  },
+  {
+    id: "dental",
+    title: "Dental",
+    intro:
+      "Dental care for cats and dogs. Each package includes pre-operative blood testing. Dog packages are listed by weight, starting at 1 to 10 kg.",
+  },
+];
 
 export const MEMBERSHIP_INTRO =
   "Our three annual memberships bundle grooming, vaccinations, parasite prevention and vet consultations into one plan, with priority booking and a standing discount on clinical procedures.";
@@ -42,6 +63,7 @@ export const CARE_PACKAGES: CarePackage[] = [
   {
     id: "cat-spay",
     pet: "cat",
+    category: "surgery",
     title: "Cat Spaying Package",
     price: "1,000",
     priceLabel: "AED 1,000 + VAT",
@@ -65,6 +87,7 @@ export const CARE_PACKAGES: CarePackage[] = [
   {
     id: "cat-castration",
     pet: "cat",
+    category: "surgery",
     title: "Cat Castration Package",
     price: "700",
     priceLabel: "AED 700 + VAT",
@@ -87,10 +110,12 @@ export const CARE_PACKAGES: CarePackage[] = [
   {
     id: "cat-dental",
     pet: "cat",
-    title: "Small Breed Dental Care Package (1–10 kg)",
+    category: "dental",
+    title: "Cat Dental Care Package",
     price: "1,000",
     priceLabel: "AED 1,000 + VAT",
-    summary: "Suitable for cats and small dog breeds — a full dental procedure with assessment, cleaning and aftercare.",
+    summary:
+      "A full dental procedure for cats, with pre-operative blood testing, assessment, cleaning and aftercare.",
     includes: [
       "Pre-Operative Blood Testing",
       "Pre-Anaesthetic Veterinary Examination",
@@ -109,12 +134,63 @@ export const CARE_PACKAGES: CarePackage[] = [
     imageAlt: "Veterinary dental scaling and polishing",
   },
   {
+    id: "dog-spay",
+    pet: "dog",
+    category: "surgery",
+    title: "Dog Spaying Package (1–10 kg)",
+    price: "1,000",
+    priceLabel: "AED 1,000 + VAT",
+    summary:
+      "A complete spay procedure for female dogs weighing 1 to 10 kg, including pre-operative blood testing.",
+    includes: [
+      "Pre-Surgical Veterinary Consultation",
+      "Comprehensive Physical Examination",
+      "Pre-Operative Blood Testing",
+      "Spay Surgery",
+      "IV Fluid Support During Procedure",
+      "Pain Management",
+      "Post-Operative Medications",
+      "Recovery Monitoring",
+      "Complimentary Follow-Up Examination",
+    ],
+    freeWith: "Surgical Recovery Vest, Nail Trimming, Priority Appointment Access",
+    cta: "Book Dog Spaying",
+    image: "/images/svc/surgery-prep.jpg",
+    imageAlt: "Veterinary team preparing a dog for surgery",
+  },
+  {
+    id: "dog-castration",
+    pet: "dog",
+    category: "surgery",
+    title: "Dog Castration Package (1–10 kg)",
+    price: "700",
+    priceLabel: "AED 700 + VAT",
+    summary:
+      "A complete castration procedure for male dogs weighing 1 to 10 kg, with pre-operative blood testing included.",
+    includes: [
+      "Pre-Operative Blood Testing",
+      "Pre-Operative Veterinary Examination",
+      "Dog Castration Surgery",
+      "General Anaesthesia & Monitoring",
+      "Post-Operative Medication (as prescribed)",
+      "Recovery Monitoring",
+      "Post-Operative Follow-Up",
+      "Post-Surgery Care Instructions",
+    ],
+    freeWith: "Surgical Recovery Vest, Nail Trimming, Priority Appointment Access",
+    cta: "Book Dog Castration",
+    image: "/images/svc/bandage.jpg",
+    imageAlt: "Dog receiving post-operative veterinary care",
+  },
+  {
     id: "dog-dental-small",
     pet: "dog",
+    category: "dental",
     title: "Small Breed Dental Care Package (1–10 kg)",
     price: "1,000",
     priceLabel: "AED 1,000 + VAT",
-    summary: "A full dental procedure for smaller pets, combining assessment, cleaning and aftercare.",
+    summary:
+      "A full dental procedure for dogs weighing 1 to 10 kg, with pre-operative blood testing, assessment, cleaning and aftercare.",
     includes: [
       "Pre-Operative Blood Testing",
       "Pre-Anaesthetic Veterinary Examination",
@@ -135,6 +211,7 @@ export const CARE_PACKAGES: CarePackage[] = [
   {
     id: "dog-dental-medium",
     pet: "dog",
+    category: "dental",
     title: "Medium Breed Dental Care Package (10–20 kg)",
     price: "1,250",
     priceLabel: "AED 1,250 + VAT",
@@ -159,6 +236,7 @@ export const CARE_PACKAGES: CarePackage[] = [
   {
     id: "dog-dental-large",
     pet: "dog",
+    category: "dental",
     title: "Large Breed Dental Care Package (20–30 kg)",
     price: "1,500",
     priceLabel: "AED 1,500 + VAT",
@@ -266,6 +344,29 @@ export const MEMBERSHIP_COMPARE_ROWS: {
   { label: "Discount on Clinical Procedures", values: ["5%", "10%", "15%"] },
 ];
 
+export const PACKAGE_FAQS = [
+  {
+    question: "Do procedure packages include a blood test?",
+    answer:
+      "Yes. Spay, castration and dental packages all include pre-operative blood testing. We do not offer these procedures as a package without a blood test.",
+  },
+  {
+    question: "Are packages separate for cats and dogs?",
+    answer:
+      "Yes. Cat and dog packages are listed separately. Dog spay and castration packages are for pets weighing 1 to 10 kg. Dog dental packages are listed by weight, starting at 1 to 10 kg.",
+  },
+  {
+    question: "Where can I find surgery and dental packages?",
+    answer:
+      "Spay and castration packages are on the Surgery service page. Dental packages are on the Dentistry service page. Both are also listed together on the Packages page.",
+  },
+  {
+    question: "What is Grand Opening pricing?",
+    answer:
+      "Packages are currently launching at Grand Opening pricing. All listed prices are exclusive of VAT. Our team will confirm the final amount when you get in touch.",
+  },
+];
+
 export const MEMBERSHIP_FAQS = [
   {
     question: "What's included in each membership?",
@@ -278,24 +379,32 @@ export const MEMBERSHIP_FAQS = [
       "Memberships combine the care pets need most often into one clear annual price, with extras such as priority appointments and procedure discounts. That makes routine care easier to plan and usually more cost-effective than booking each service separately.",
   },
   {
-    question: "Are healthcare packages and memberships for both cats and dogs?",
-    answer:
-      "Yes. Annual memberships are for cats and dogs. Healthcare packages are grouped by pet: cat spay and castration packages, plus dental packages sized by weight for cats and dogs.",
+    question: "Are memberships for both cats and dogs?",
+    answer: "Yes. Signature Paw, Prestige Paw and Platinum Paw are annual memberships for cats and dogs.",
   },
   {
-    question: "How do I join a membership or book a package?",
+    question: "How do I join a membership?",
     answer:
-      "Use Join a Membership on the plan you want, or Book on a healthcare package. WhatsApp opens with that plan's details so our team can confirm availability and Grand Opening pricing.",
+      "Use Join a Membership on the plan you want. WhatsApp opens with that plan's details so our team can confirm availability.",
   },
   {
-    question: "What is Grand Opening pricing?",
+    question: "Where are the procedure packages?",
     answer:
-      "Packages are currently launching at Grand Opening pricing. All listed prices are exclusive of VAT. Our team will confirm the final amount when you get in touch.",
+      "Spay, castration and dental packages are on the Packages page, and on the Surgery and Dentistry service pages. Every procedure package includes a blood test.",
   },
 ];
 
 function formatList(items: string[]) {
   return items.map((item) => `• ${item}`).join("\n");
+}
+
+export function packagesFor(category: PackageCategory, pet: PetType) {
+  return CARE_PACKAGES.filter(
+    (pkg) =>
+      pkg.category === category &&
+      pkg.pet === pet &&
+      pkg.includes.some((item) => /blood/i.test(item)),
+  );
 }
 
 export function carePackageWhatsappUrl(pkg: CarePackage) {

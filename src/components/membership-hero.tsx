@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Frame, PillButton } from "@/components/ui";
-import { CARE_INTRO } from "@/data/membership";
+import { MEMBERSHIP_INTRO } from "@/data/membership";
 
 export function MembershipHero() {
   return (
@@ -16,15 +16,15 @@ export function MembershipHero() {
                 Membership
               </p>
               <h1 className="mt-3 font-display text-[32px] uppercase leading-[36px] text-olive sm:text-[46px] sm:leading-[44px]">
-                Health Care
+                Annual
                 <br />
-                Packages
+                Memberships
               </h1>
               <span className="mt-5 inline-flex rounded-full bg-olive px-4 py-1.5 text-[12px] font-bold tracking-[-0.16px] text-cream">
-                Grand Opening Pricing
+                Cats &amp; Dogs
               </span>
               <p className="mt-6 max-w-[520px] text-[16px] leading-[24px] text-olive sm:text-[18px] sm:leading-[26px]">
-                {CARE_INTRO}
+                {MEMBERSHIP_INTRO}
               </p>
             </div>
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
@@ -33,6 +33,9 @@ export function MembershipHero() {
               </PillButton>
               <PillButton href="#memberships" variant="cream" size="sm">
                 View Memberships
+              </PillButton>
+              <PillButton href="/packages" variant="cream" size="sm">
+                View Packages
               </PillButton>
             </div>
           </div>

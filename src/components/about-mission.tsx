@@ -80,7 +80,7 @@ export function AboutMission() {
                 The story behind Arabian Paws
               </h2>
               <p className="mt-8 text-[16px] leading-[24px] sm:mt-10 sm:text-[20px] sm:leading-[24px]">
-                Founded by five partners with experience across veterinary care, nursing and clinic
+                Founded by four partners with experience across veterinary care, nursing and clinic
                 administration. The clinic was created to become a respected veterinary name in
                 Dubai, beginning with the communities around Majan.
               </p>
