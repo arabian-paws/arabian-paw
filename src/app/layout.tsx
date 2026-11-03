@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Reveal } from "@/components/reveal";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -72,6 +73,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${syne.variable} ${urbanist.variable} ${inter.variable} antialiased`}
     >
       <body className="min-h-full bg-white text-olive">
+                <Script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-T677PZDS"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());`}
+        </Script>
         <Header />
         {children}
         <Reveal>
