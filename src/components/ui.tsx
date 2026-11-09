@@ -31,6 +31,8 @@ export const PHONE_LANDLINE = "tel:+97142599244";
 export const PHONE_DISPLAY = "04 259 9244";
 export const PHONE_MOBILE = "tel:+971565110765";
 export const PHONE_MOBILE_DISPLAY = "+971 56 511 0765";
+export const MAPS_LOCATION =
+  "https://www.google.com/maps/search/?api=1&query=Arabian+Paws+Veterinary+Clinic&query_place_id=ChIJqSySWw5vXz4RUZV8GnWf0nM";
 
 export function PillButton({
   href,

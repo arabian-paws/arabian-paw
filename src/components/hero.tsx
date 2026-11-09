@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Frame, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY } from "@/components/ui";
+import { Frame, MAPS_LOCATION, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY } from "@/components/ui";
 
 export function Hero() {
   return (
@@ -8,7 +8,7 @@ export function Hero() {
       <Frame>
         <div className="grid items-stretch gap-2 lg:grid-cols-[minmax(0,639fr)_minmax(0,633fr)]">
           <div className="hero-rise flex flex-col gap-2" style={{ animationDelay: "80ms" }}>
-            <div className="relative flex h-auto shrink-0 flex-col justify-between overflow-hidden rounded-xl bg-sage px-5 py-6 sm:px-7 sm:py-7 lg:h-[247px]">
+            <div className="relative flex h-auto shrink-0 flex-col justify-between overflow-hidden rounded-xl bg-sage px-5 py-6 sm:px-7 sm:py-7 lg:min-h-[247px]">
               <h1 className="font-display text-[26px] uppercase leading-[30px] text-olive sm:text-[30px] sm:leading-[34px] lg:text-[36px]">
                 Where Every Paw
                 <br />
@@ -18,16 +18,28 @@ export function Hero() {
                 <p className="w-full text-[16px] leading-[20px] text-black sm:text-[20px] sm:leading-[23px]">
                   Comprehensive veterinary care focused on your pet&apos;s health, comfort and well-being at every stage of life.
                 </p>
-                <PillButton
-                  href={WHATSAPP_EMERGENCY}
-                  variant="emergency"
-                  icon="/icons/medical-hero.svg"
-                  size="sm"
-                  className="w-full sm:w-auto"
-                  subtitle={WHATSAPP_DISPLAY}
-                >
-                  Open 24/7 Emergency
-                </PillButton>
+                <div className="flex w-full flex-col gap-2 sm:flex-row sm:flex-wrap">
+                  <PillButton
+                    href={WHATSAPP_EMERGENCY}
+                    variant="emergency"
+                    icon="/icons/medical-hero.svg"
+                    size="sm"
+                    className="w-full sm:w-auto"
+                    subtitle={WHATSAPP_DISPLAY}
+                  >
+                    Open 24/7 Emergency
+                  </PillButton>
+                  <PillButton
+                    href={MAPS_LOCATION}
+                    variant="olive"
+                    icon="/icons/location-pin.svg"
+                    size="sm"
+                    className="w-full sm:w-auto"
+                    subtitle="Majan, Dubai"
+                  >
+                    Location
+                  </PillButton>
+                </div>
               </div>
             </div>
 
