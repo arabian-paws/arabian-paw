@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Frame } from "@/components/ui";
 
 const socials = [
@@ -27,13 +26,10 @@ const socials = [
 function Photo({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="group relative w-full overflow-hidden rounded-2xl bg-cream-soft">
-      <Image
+      <img
         src={src}
         alt={alt}
-        width={840}
-        height={1200}
         className="h-auto w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-        sizes="(max-width: 768px) 100vw, 33vw"
       />
     </div>
   );
@@ -52,8 +48,8 @@ export function Gallery() {
 
         <div className="mt-10 grid grid-cols-1 items-start gap-6 md:grid-cols-3">
           <div className="flex flex-col gap-6">
-            <Photo src="/images/gallery-1.jpg" alt="Arabian Paws from nose to tail care" />
-            <Photo src="/images/gallery-4.jpg" alt="Arabian Paws doors are open" />
+            <Photo src="/images/gallery-1.jpg" alt="Little changes can mean something — signs a cat may need a vet visit" />
+            <Photo src="/images/gallery-4.jpg" alt="Our doors are open. Arabian Paws is open 24/7 in Majan, Dubai" />
           </div>
 
           <div className="relative min-h-[420px] overflow-hidden rounded-2xl bg-olive md:min-h-[640px] lg:min-h-[820px]">
@@ -68,7 +64,7 @@ export function Gallery() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <Photo src="/images/gallery-2.jpg" alt="Some pets just don't do vets" />
+            <Photo src="/images/gallery-2.jpg" alt="Bad breath is often a sign of dental disease. Book a dental check" />
             <Photo src="/images/gallery-3.jpg" alt="Better care starts at home" />
           </div>
         </div>

@@ -16,7 +16,7 @@ function Card({
 }) {
   return (
     <article
-      className={`h-[300px] rounded-2xl border border-[#d7d7d7] p-6 shadow-[0px_2px_4px_rgba(25,33,61,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0px_10px_24px_rgba(25,33,61,0.12)] ${className}`}
+      className={`min-h-[300px] rounded-2xl border border-[#d7d7d7] p-6 shadow-[0px_2px_4px_rgba(25,33,61,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0px_10px_24px_rgba(25,33,61,0.12)] ${className}`}
     >
       <span className="relative block h-[29px] w-[42px] overflow-clip">
         <img src="/icons/quote.svg" alt="" className="size-full object-contain" />
@@ -58,33 +58,33 @@ export function Testimonials() {
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div className="flex flex-col gap-5 sm:pt-[72px]">
               <Card
-                quote="Veterinary professionals with extensive hands-on experience caring for pets."
-                name="Andy Smith"
-                location="Majan, Dubai"
-                avatar="/images/avatar-milla.png"
+                quote="Brought my cat for vaccination. The clinic has a very comfortable and cozy environment, and the doctors are extremely humble, professional, and caring. They have comprehensive facilities and provide excellent service. Special thanks to Dr. Imran for his kindness and professionalism. Highly recommended."
+                name="Noor-Neon"
+                location="Google review"
+                avatar="/images/reviews/noor.jpg"
                 className="bg-white"
               />
               <Card
-                quote="A purpose-designed clinic with contemporary equipment and clinical spaces."
-                name="Sahara Connor"
-                location="Jumeirah, Dubai"
-                avatar="/images/avatar-milly.png"
+                quote="Staff alls seam amazing they all seam angel with animals and all time smile with people dr Haze and Dr valves also dr wasem thank u for everything."
+                name="Hamid"
+                location="Google review"
+                avatar="/images/reviews/hamid.jpg"
                 className="bg-cream"
               />
             </div>
             <div className="flex flex-col gap-5">
               <Card
-                quote="Specialised veterinary dental care supported by advanced technology."
-                name="Milla Collins"
-                location="Arabian Ranches, Dubai"
-                avatar="/images/avatar-andy.png"
+                quote="One the best vets, doctor islam is really kind and respectful to the clients."
+                name="Hos Kh"
+                location="Google review"
+                avatar="/images/reviews/hos.jpg"
                 className="bg-white"
               />
               <Card
-                quote="Premium veterinary services delivered with considered pricing and complimentary parking."
-                name="Milly Taylor"
-                location="Al Barari, Dubai"
-                avatar="/images/avatar-sahara.png"
+                quote="Such a high tech clinic I never say before in UAE well done Arabian Paws."
+                name="Wasiq Habib"
+                location="Google review"
+                avatar="/images/reviews/wasiq.jpg"
                 className="bg-white"
               />
             </div>
