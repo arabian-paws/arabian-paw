@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Frame, MAPS_LOCATION, PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY } from "@/components/ui";
+import {
+  Frame,
+  MAPS_LOCATION,
+  PHONE_MOBILE,
+  PHONE_MOBILE_DISPLAY,
+  PillButton,
+  WHATSAPP_DISPLAY,
+  WHATSAPP_EMERGENCY,
+} from "@/components/ui";
 
 export function Hero() {
   return (
@@ -20,12 +28,12 @@ export function Hero() {
                 </p>
                 <div className="flex w-full flex-col gap-2 sm:flex-row sm:flex-wrap">
                   <PillButton
-                    href={WHATSAPP_EMERGENCY}
+                    href={PHONE_MOBILE}
                     variant="emergency"
                     icon="/icons/medical-hero.svg"
                     size="sm"
                     className="w-full sm:w-auto"
-                    subtitle={WHATSAPP_DISPLAY}
+                    subtitle={PHONE_MOBILE_DISPLAY}
                   >
                     Open 24/7 Emergency
                   </PillButton>

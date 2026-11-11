@@ -70,9 +70,7 @@ export function ContactHero() {
               <span className="text-[22px] tracking-[-1.4px] sm:text-[28px]">04 259 9244</span>
             </a>
             <a
-              href="https://wa.me/971565110765"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:+971565110765"
               className="flex h-[96px] items-center gap-8 rounded-[12px] bg-emergency px-6 text-white sm:px-[42px]"
             >
               <img src="/icons/medical-white.svg" alt="" className="size-[40px] object-contain" />

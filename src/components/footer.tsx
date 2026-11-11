@@ -3,11 +3,13 @@
 import Image from "next/image";
 import { Logo } from "@/components/logo";
 import {
-  PillButton,
-  WHATSAPP_EMERGENCY,
-  WHATSAPP_DISPLAY,
-  PHONE_LANDLINE,
   PHONE_DISPLAY,
+  PHONE_LANDLINE,
+  PHONE_MOBILE,
+  PHONE_MOBILE_DISPLAY,
+  PillButton,
+  WHATSAPP_DISPLAY,
+  WHATSAPP_EMERGENCY,
 } from "@/components/ui";
 import { SERVICES } from "@/data/services";
 
@@ -127,11 +129,11 @@ export function Footer() {
                   Book Appointment
                 </PillButton>
                 <PillButton
-                  href={WHATSAPP_EMERGENCY}
+                  href={PHONE_MOBILE}
                   variant="cream"
                   icon="/icons/medical-footer-dark.svg"
                   size="sm"
-                  subtitle={WHATSAPP_DISPLAY}
+                  subtitle={PHONE_MOBILE_DISPLAY}
                 >
                   24/7 Emergency
                 </PillButton>

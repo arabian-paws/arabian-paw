@@ -4,7 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/logo";
-import { PillButton, WHATSAPP_EMERGENCY, WHATSAPP_DISPLAY } from "@/components/ui";
+import {
+  PHONE_MOBILE,
+  PHONE_MOBILE_DISPLAY,
+  PillButton,
+  WHATSAPP_DISPLAY,
+  WHATSAPP_EMERGENCY,
+} from "@/components/ui";
 import { SERVICES } from "@/data/services";
 
 const links: { href: string; label: string; match?: string; exact?: boolean }[] = [
@@ -119,11 +125,11 @@ export function Header() {
             Book Appointment
           </PillButton>
           <PillButton
-            href={WHATSAPP_EMERGENCY}
+            href={PHONE_MOBILE}
             variant="emergency"
             icon="/icons/medical-white.svg"
             size="sm"
-            subtitle={WHATSAPP_DISPLAY}
+            subtitle={PHONE_MOBILE_DISPLAY}
           >
             24/7 Emergency
           </PillButton>
@@ -230,11 +236,11 @@ export function Header() {
             Book Appointment
           </PillButton>
           <PillButton
-            href={WHATSAPP_EMERGENCY}
+            href={PHONE_MOBILE}
             variant="emergency"
             icon="/icons/medical-white.svg"
             size="sm"
-            subtitle={WHATSAPP_DISPLAY}
+            subtitle={PHONE_MOBILE_DISPLAY}
           >
             24/7 Emergency
           </PillButton>
