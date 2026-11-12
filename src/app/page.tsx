@@ -21,7 +21,7 @@ export default function Home() {
         <Services />
       </Reveal>
       <Reveal>
-        <Vets />
+        <Vets featured />
       </Reveal>
       <Reveal>
         <Testimonials />

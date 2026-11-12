@@ -8,16 +8,10 @@ const vets = [
     image: "/images/vet-mudasser.webp",
   },
   {
-    name: "Mohsin Shafique",
-    role: "General Manager",
-    experience: "5 Years Of Experience",
-    image: "/images/vet-mohsin.webp",
-  },
-  {
-    name: "Krishna",
-    role: "Nurse Assistant",
-    experience: "2 Years Of Experience",
-    image: "/images/vet-krishna.webp",
+    name: "Dr Imran",
+    role: "Veterinary Surgeon",
+    experience: "7 Years Of Experience",
+    image: "/images/vet-imran.webp",
   },
   {
     name: "Dr Hasnain",
@@ -26,16 +20,10 @@ const vets = [
     image: "/images/vet-hasnain.webp",
   },
   {
-    name: "Josephine",
-    role: "Groomer",
+    name: "Mohsin Shafique",
+    role: "General Manager",
     experience: "5 Years Of Experience",
-    image: "/images/vet-josephine.webp",
-  },
-  {
-    name: "Dr Imran",
-    role: "Veterinary Surgeon",
-    experience: "7 Years Of Experience",
-    image: "/images/vet-imran.webp",
+    image: "/images/vet-mohsin.webp",
   },
   {
     name: "Usman Ali",
@@ -43,9 +31,26 @@ const vets = [
     experience: "3 Years Of Experience",
     image: "/images/vet-usman.webp",
   },
+  {
+    name: "Krishna",
+    role: "Nurse Assistant",
+    experience: "2 Years Of Experience",
+    image: "/images/vet-krishna.webp",
+  },
+  {
+    name: "Josephine",
+    role: "Groomer",
+    experience: "5 Years Of Experience",
+    image: "/images/vet-josephine.webp",
+  },
 ];
 
-export function Vets({ showCta = true }: { showCta?: boolean }) {
+const homeTeam = ["Dr Hafiz Mudasser", "Mohsin Shafique", "Dr Imran"];
+
+export function Vets({ showCta = true, featured = false }: { showCta?: boolean; featured?: boolean }) {
+  const people = featured
+    ? homeTeam.map((name) => vets.find((vet) => vet.name === name)).filter((vet) => vet !== undefined)
+    : vets;
   return (
     <section
       id="vets"
@@ -56,7 +61,7 @@ export function Vets({ showCta = true }: { showCta?: boolean }) {
           Meet Our Team
         </h2>
         <div className="mx-auto flex max-w-[1100px] flex-wrap justify-center gap-6">
-          {vets.map((vet) => (
+          {people.map((vet) => (
             <article
               key={vet.name}
               className="group relative h-[420px] w-full overflow-hidden rounded-[24px] bg-cream transition-transform duration-500 hover:-translate-y-2 sm:h-[488px] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
