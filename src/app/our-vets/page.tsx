@@ -5,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata = {
   title: "Our Vets | Arabian Paws",
   description:
-    "Meet the founding team behind Arabian Paws — veterinary, nursing and administrative expertise with years of professional experience.",
+    "Meet the Arabian Paws team — veterinary surgeons, nurses, grooming and clinic leadership with years of professional experience.",
 };
 
 export default function OurVetsPage() {

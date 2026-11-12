@@ -13,6 +13,36 @@ const vets = [
     experience: "5 Years Of Experience",
     image: "/images/vet-mohsin.webp",
   },
+  {
+    name: "Krishna",
+    role: "Nurse Assistant",
+    experience: "2 Years Of Experience",
+    image: "/images/vet-krishna.webp",
+  },
+  {
+    name: "Dr Hasnain",
+    role: "Veterinary Doctor",
+    experience: "5 Years Of Experience",
+    image: "/images/vet-hasnain.webp",
+  },
+  {
+    name: "Josephine",
+    role: "Groomer",
+    experience: "5 Years Of Experience",
+    image: "/images/vet-josephine.webp",
+  },
+  {
+    name: "Dr Imran",
+    role: "Veterinary Surgeon",
+    experience: "7 Years Of Experience",
+    image: "/images/vet-imran.webp",
+  },
+  {
+    name: "Usman Ali",
+    role: "Veterinary Nurse",
+    experience: "3 Years Of Experience",
+    image: "/images/vet-usman.webp",
+  },
 ];
 
 export function Vets({ showCta = true }: { showCta?: boolean }) {
@@ -25,11 +55,11 @@ export function Vets({ showCta = true }: { showCta?: boolean }) {
         <h2 className="mb-8 text-center font-display text-[36px] uppercase leading-[34px] text-olive">
           Meet Our Team
         </h2>
-        <div className="mx-auto grid max-w-[860px] items-start gap-6 sm:grid-cols-2">
+        <div className="mx-auto flex max-w-[1100px] flex-wrap justify-center gap-6">
           {vets.map((vet) => (
             <article
               key={vet.name}
-              className="group relative h-[488px] overflow-hidden rounded-[24px] bg-cream transition-transform duration-500 hover:-translate-y-2"
+              className="group relative h-[420px] w-full overflow-hidden rounded-[24px] bg-cream transition-transform duration-500 hover:-translate-y-2 sm:h-[488px] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
             >
               <img
                 src={vet.image}
@@ -55,19 +85,19 @@ export function Vets({ showCta = true }: { showCta?: boolean }) {
           ))}
         </div>
         {showCta ? (
-          <div className="mx-auto mt-10 flex max-w-[860px] flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-            <p className="max-w-[480px] text-[22px] leading-[24px] text-olive">
-              Our founding team brings together veterinary and administrative expertise, with years
-              of experience working in professional veterinary environments.
+          <div className="mx-auto mt-10 flex max-w-[1100px] flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+            <p className="max-w-[560px] text-[22px] leading-[24px] text-olive">
+              Our team brings together veterinary, nursing, grooming and administrative expertise,
+              with years of experience in professional veterinary care.
             </p>
             <PillButton href="/our-vets" variant="olive" className="w-[200px] px-0">
               Meet Our Team
             </PillButton>
           </div>
         ) : (
-          <p className="mx-auto mt-10 max-w-[640px] text-center text-[22px] leading-[24px] text-olive">
-            Our founding team brings together veterinary and administrative expertise, with years of
-            experience working in professional veterinary environments.
+          <p className="mx-auto mt-10 max-w-[720px] text-center text-[22px] leading-[24px] text-olive">
+            Our team brings together veterinary, nursing, grooming and administrative expertise, with
+            years of experience in professional veterinary care.
           </p>
         )}
       </Frame>
