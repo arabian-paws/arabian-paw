@@ -8,6 +8,12 @@ const vets = [
     image: "/images/vet-mudasser.webp",
   },
   {
+    name: "Mohsin Shafique",
+    role: "General Manager",
+    experience: "5 Years Of Experience",
+    image: "/images/vet-mohsin.webp",
+  },
+  {
     name: "Dr Imran",
     role: "Veterinary Surgeon",
     experience: "7 Years Of Experience",
@@ -18,12 +24,6 @@ const vets = [
     role: "Veterinary Doctor",
     experience: "5 Years Of Experience",
     image: "/images/vet-hasnain.webp",
-  },
-  {
-    name: "Mohsin Shafique",
-    role: "General Manager",
-    experience: "5 Years Of Experience",
-    image: "/images/vet-mohsin.webp",
   },
   {
     name: "Usman Ali",
