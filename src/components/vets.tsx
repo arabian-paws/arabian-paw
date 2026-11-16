@@ -4,6 +4,7 @@ const vets = [
   {
     name: "Dr Hafiz Mudasser",
     role: "Medical Director, Veterinary Surgeon",
+    credential: "MOCCAE Licensed Veterinarian",
     experience: "12 Years Of Experience",
     image: "/images/vet-mudasser.webp",
   },
@@ -16,14 +17,16 @@ const vets = [
   {
     name: "Dr Imran",
     role: "Veterinary Surgeon",
+    credential: "MOCCAE Licensed Veterinarian",
     experience: "7 Years Of Experience",
-    image: "/images/vet-imran.webp",
+    image: "/images/vet-imran.webp?v=2",
   },
   {
     name: "Dr Hasnain",
     role: "Veterinary Doctor",
+    credential: "MOCCAE Licensed Veterinarian",
     experience: "5 Years Of Experience",
-    image: "/images/vet-hasnain.webp",
+    image: "/images/vet-hasnain.webp?v=2",
   },
   {
     name: "Usman Ali",
@@ -35,13 +38,13 @@ const vets = [
     name: "Krishna",
     role: "Nurse Assistant",
     experience: "2 Years Of Experience",
-    image: "/images/vet-krishna.webp",
+    image: "/images/vet-krishna.webp?v=2",
   },
   {
     name: "Josephine",
     role: "Groomer",
     experience: "5 Years Of Experience",
-    image: "/images/vet-josephine.webp",
+    image: "/images/vet-josephine.webp?v=2",
   },
 ];
 
@@ -76,6 +79,9 @@ export function Vets({ showCta = true, featured = false }: { showCta?: boolean; 
                 <div className="min-w-0 flex-1 rounded-2xl border border-[#d7d7d7] bg-white px-3 py-3 shadow-[0px_2px_4px_rgba(25,33,61,0.08)]">
                   <p className="text-[20px] font-medium leading-[26px] text-ink">{vet.name}</p>
                   <p className="text-[14px] leading-[20px] text-muted-2">{vet.role}</p>
+                  {"credential" in vet && vet.credential ? (
+                    <p className="mt-1 text-[12px] font-medium leading-[16px] text-olive">{vet.credential}</p>
+                  ) : null}
                   {vet.experience ? (
                     <p className="mt-1 text-[12px] font-medium leading-[16px] text-olive">
                       {vet.experience}
